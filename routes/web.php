@@ -18,5 +18,8 @@ Route::get('/stickerAbierto', 'App\Http\Controllers\PaginaPrincipalController@st
 Route::get('/opiniones', 'App\Http\Controllers\PaginaPrincipalController@opiniones')->name('opiniones');
 Route::get('/perfiles', 'App\Http\Controllers\PaginaPrincipalController@perfiles')->name('perfiles');
 Route::get('/elementosGuardados', 'App\Http\Controllers\PaginaPrincipalController@elementosGuardados')->name('elementosGuardados');
+Route::get('/editarPerfil', 'App\Http\Controllers\PaginaPrincipalController@editarPerfil')->name('editarPerfil');
+Route::get('/anadirSticker', 'App\Http\Controllers\PaginaPrincipalController@anadirSticker')->name('anadirSticker');
+Route::post('/storeSticker', 'App\Http\Controllers\PaginaPrincipalController@storeSticker')->name('storeSticker');
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

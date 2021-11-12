@@ -1,5 +1,5 @@
 /*HEADER*/
-header{
+header {
     background: white;
     display: flex;
     align-items: center;
@@ -8,9 +8,10 @@ header{
     width: 100%;
     height: 60px;
     z-index: 1;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1);
 }
 
-header>img{
+header > img {
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,17 +21,22 @@ header>img{
 /*======================STICKER PAGINA PRINCIPAL======================*/
 /*==================================================*/
 /*==================================================*/
-section{
+section {
     display: flex;
     flex-flow: column;
     margin-top: 4rem;
 }
 
-section>a>div.sticker{
-    width: 80%;
-    margin-right:auto;
-    margin-left:auto;
+section > a {
+    height: 15rem;
     margin-top: 1.5rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section > a > div.sticker {
+
     height: 15rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
     border-radius: 6px;
@@ -38,7 +44,7 @@ section>a>div.sticker{
 }
 
 /*Titulo*/
-section>a>div.sticker>div:nth-child(1){
+section > a > div.sticker > div:nth-child(1) {
     background: rgba(25, 85, 152, 0.6);
     height: 2.5rem;
     margin-top: 1rem;
@@ -46,20 +52,20 @@ section>a>div.sticker>div:nth-child(1){
     width: 12rem;
 }
 
-section>a>div.sticker>div>p{
+section > a > div.sticker > div > p {
     margin-top: 0.5rem;
     margin-left: 1rem;
     color: white;
 }
 
-section>a>div.sticker>div:nth-child(2){
+section > a > div.sticker > div:nth-child(2) {
     position: absolute;
     width: 100%;
     height: 2.7rem;
     left: 0px;
     top: 12.3rem;
     justify-content: space-between;
-    display:flex;
+    display: flex;
     flex-flow: row;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 0px 0px 6px 6px;
@@ -67,24 +73,24 @@ section>a>div.sticker>div:nth-child(2){
     cursor: default;
 }
 
-section>a>div.sticker>div:nth-child(2)>h5{
+section > a > div.sticker > div:nth-child(2) > h5 {
     margin-left: 1rem;
     margin-top: 7px;
     font-size: 1rem;
-    color:black;
+    color: black;
 }
 
-section>a>div.sticker>div:nth-child(2)>div{
+section > a > div.sticker > div:nth-child(2) > div {
     width: 3rem;
     display: flex;
     justify-content: space-between;
     margin-right: 0.5rem;
 }
 
-section>a>div.sticker>div:nth-child(2)>div>i{
-    color:#1C60AD;
+section > a > div.sticker > div:nth-child(2) > div > i {
+    color: #1C60AD;
     font-size: 1.4rem;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /*==================================================*/
@@ -93,101 +99,101 @@ section>a>div.sticker>div:nth-child(2)>div>i{
 /*==================================================*/
 /*==================================================*/
 
-section>div.sticker{
+section > div.sticker {
     width: 80%;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 1.5rem;
     height: 15rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
     border-radius: 6px;
 }
 
-section>div.sticker>div{
+section > div.sticker > div {
     position: absolute;
     width: 100%;
     height: 2.7rem;
     left: 0px;
     top: 12.3rem;
     justify-content: space-between;
-    display:flex;
+    display: flex;
     flex-flow: row;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 0px 0px 6px 6px;
     align-items: center;
 }
 
-section>div.sticker>div>h5{
+section > div.sticker > div > h5 {
     margin-left: 1rem;
     margin-top: 7px;
     font-size: 1rem;
-    color:black;
+    color: black;
     font-weight: bold;
 }
 
-section>div.sticker>div>div{
+section > div.sticker > div > div {
     width: 5rem;
     display: flex;
     justify-content: space-between;
     margin-right: 0.5rem;
 }
 
-section>div.sticker>div>div>i{
-    color:#1C60AD;
+section > div.sticker > div > div > i {
+    color: #1C60AD;
     font-size: 1.4rem;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-section>div.stickerBody{
+section > div.stickerBody {
     display: flex;
     flex-flow: column;
 }
 
-section>div.stickerBody>h3{
+section > div.stickerBody > h3 {
     width: 80%;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 1.5rem;
     font-weight: bold;
 
 }
 
-section>div.stickerBody>p{
+section > div.stickerBody > p {
     width: 80%;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     color: #646464;
     font-weight: 500;
     line-height: 19px;
     font-size: 15px;
 }
 
-.imagenesSticker{
+.imagenesSticker {
     display: flex;
     flex-flow: row wrap;
     width: 80%;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     justify-content: space-between;
     margin-top: -1rem;
 }
 
-.imagenesSticker>img{
+.imagenesSticker > img {
     width: 48%;
     border-radius: 8px;
     margin-top: 1rem;
 }
 
-section>div.stickerBody>div.userProfile{
+section > div.stickerBody > div.userProfile {
     display: flex;
     width: 80%;
     align-items: center;
     justify-content: end;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-section>div.stickerBody>div.userProfile>p{
+section > div.stickerBody > div.userProfile > p {
     margin-top: 1rem;
     margin-right: .7rem;
     font-style: italic;
@@ -195,79 +201,80 @@ section>div.stickerBody>div.userProfile>p{
     font-size: .9rem;
 }
 
-section>div.stickerBody>div.userProfile>a>img{
+section > div.stickerBody > div.userProfile > a > img {
     width: 2rem;
     height: 2rem;
     border-radius: 30rem;
 }
 
-section>div.stickerBody>div.opinions{
+section > div.stickerBody > div.opinions {
     margin-bottom: 6rem;
     width: 70%;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 1rem;
     display: flex;
     flex-flow: column;
 }
 
-section>div.stickerBody>div.opinions>div:nth-child(1)>i{
+section > div.stickerBody > div.opinions > div:nth-child(1) > i {
     margin-right: .7rem;
     font-size: 1.2rem;
 }
 
-section>div.stickerBody>div.opinions>div:nth-child(1)>span{
+section > div.stickerBody > div.opinions > div:nth-child(1) > span {
     font-size: 1.2rem;
 }
 
-section>div.stickerBody>div.opinions>div:nth-child(1)>span>a{
+section > div.stickerBody > div.opinions > div:nth-child(1) > span > a {
 
     color: black;
 }
 
-section>div.stickerBody>div.opinions>div:nth-child(1)>span>span{
+section > div.stickerBody > div.opinions > div:nth-child(1) > span > span {
     text-decoration: underline;
 }
 
-section>div.stickerBody>div.opinions>div:nth-child(2){
+section > div.stickerBody > div.opinions > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-section>div.stickerBody>div.opinions>div:nth-child(2)>div{
+section > div.stickerBody > div.opinions > div:nth-child(2) > div {
     width: auto;
 }
 
-section>div.stickerBody>div.opinions>div:nth-child(2)>span{
+section > div.stickerBody > div.opinions > div:nth-child(2) > span {
     font-style: italic;
     font-size: 1.2rem;
 }
 
-.stars>i{
+.stars > i {
     font-size: 1.3rem;
 }
 
-section>div.stickerBody>div.opinions>textarea{
+section > div.stickerBody > div.opinions > textarea {
     border: 2px solid #000000;
     box-sizing: border-box;
 }
 
-section>div.stickerBody>div.opinions>form{
+section > div.stickerBody > div.opinions > form {
     margin-right: auto;
     margin-left: auto;
 }
 
-section>div.stickerBody>div.opinions>form>button{
+section > div.stickerBody > div.opinions > form > button {
     background: #1C60AD;
     border-radius: 7px;
-    border:none;
+    border: none;
     width: 9rem;
     height: 3rem;
     color: white;
     margin-top: 1.3rem;
 }
+
 /*==================================================*/
 /*==================================================*/
 /*==================OPINIONES=======================*/
@@ -280,21 +287,21 @@ div.contenedor {
     margin-bottom: 4rem;
 }
 
-div.contenedor>i{
+div.contenedor > i {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-div.contenedor>hr{
+div.contenedor > hr {
     border: 1px solid black;
 }
 
-div.contenedor>p {
+div.contenedor > p {
     font-size: 1.3rem;
     font-weight: bold;
 }
 
-div.contenedor>div.opiniones {
+div.contenedor > div.opiniones {
     display: flex;
     margin-left: 1rem;
     justify-content: start;
@@ -302,69 +309,69 @@ div.contenedor>div.opiniones {
     align-items: center;
 }
 
-div.contenedor>div.opiniones>i {
+div.contenedor > div.opiniones > i {
     width: 2rem;
     color: #626262;
     filter: invert(35%);
 }
 
-div.contenedor>div.opiniones>p {
+div.contenedor > div.opiniones > p {
     font-weight: 600;
     color: #3a3a3a;
     margin-top: 1rem;
 }
 
-div.contenedor>div.nivelOpinion>div {
+div.contenedor > div.nivelOpinion > div {
     display: flex;
     justify-content: space-between;
     width: 95%;
     margin: auto;
 }
 
-div.contenedor>div.nivelOpinion>div>p:nth-child(1) {
-    color:#7D7D7D;
+div.contenedor > div.nivelOpinion > div > p:nth-child(1) {
+    color: #7D7D7D;
     font-size: 1.1rem;
 }
 
-div.contenedor>div.nivelOpinion>div>p:nth-child(2) {
+div.contenedor > div.nivelOpinion > div > p:nth-child(2) {
     font-weight: bold;
     font-size: 1.1rem;
 
 }
 
-div.user>div.userInfo{
+div.user > div.userInfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-div.user>div.userInfo>span{
+div.user > div.userInfo > span {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-div.user>div.userInfo>div>a>img{
+div.user > div.userInfo > div > a > img {
     width: 3rem;
     height: 3rem;
     border-radius: 10rem;
     margin-right: .5rem;
 }
 
-div.user>div.userInfo>div>a{
+div.user > div.userInfo > div > a {
     text-decoration: none;
     color: black;
 }
 
-div.user>div.textOpinion{
+div.user > div.textOpinion {
     margin-top: 1rem;
     width: 98%;
 }
 
-div.user>div.textOpinion>p:nth-child(2){
-    color:#626262;
+div.user > div.textOpinion > p:nth-child(2) {
+    color: #626262;
 }
 
-div.user>div.textOpinion>p:nth-child(3){
+div.user > div.textOpinion > p:nth-child(3) {
     color: #626262;
     font-weight: bold;
 }
@@ -375,16 +382,16 @@ div.user>div.textOpinion>p:nth-child(3){
 /*==================================================*/
 /*==================================================*/
 
-section>div.profile{
+section > div.profile {
     margin-bottom: 6rem;
 }
 
-section>div>div.firstPart{
+section > div > div.firstPart {
     display: flex;
     flex-flow: column;
 }
 
-section>div>div.firstPart>div:nth-child(1){
+section > div > div.firstPart > div:nth-child(1) {
     border-bottom: 1px solid #D1D1D1;
     height: 2.1rem;
     align-items: center;
@@ -393,56 +400,56 @@ section>div>div.firstPart>div:nth-child(1){
     margin-bottom: 1rem;
 }
 
-section>div>div.firstPart>div:nth-child(1)>span{
+section > div > div.firstPart > div:nth-child(1) > span {
     font-size: .9rem;
     font-weight: bold;
 }
 
-section>div>div.firstPart>div:nth-child(1)>i{
-   font-size: 1.3rem;
+section > div > div.firstPart > div:nth-child(1) > i {
+    font-size: 1.3rem;
 }
 
-section>div>div.firstPart>div:nth-child(2){
+section > div > div.firstPart > div:nth-child(2) {
     display: flex;
     flex-flow: column;
     text-align: center;
 }
 
-section>div>div.firstPart>div:nth-child(2)>div>img{
+section > div > div.firstPart > div:nth-child(2) > div > img {
     width: 5rem;
     height: 5rem;
     border-radius: 5rem;
     margin-bottom: .4rem;
 }
 
-section>div>div.firstPart>div:nth-child(2)>div>p{
+section > div > div.firstPart > div:nth-child(2) > div > p {
     font-weight: 600;
     font-size: .8rem;
 }
 
-section>div>div.firstPart>div:nth-child(2)>div:nth-child(2){
+section > div > div.firstPart > div:nth-child(2) > div:nth-child(2) {
     display: flex;
     flex-flow: row;
     justify-content: center;
 }
 
-section>div>div.firstPart>div:nth-child(2)>div:nth-child(2)>div{
+section > div > div.firstPart > div:nth-child(2) > div:nth-child(2) > div {
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-section>div>div.firstPart>div>div>div>p{
+section > div > div.firstPart > div > div > div > p {
     font-weight: 600;
     font-size: .9rem;
 }
 
-section>div>div.firstPart>div>div>div>p:nth-child(2){
+section > div > div.firstPart > div > div > div > p:nth-child(2) {
     margin-top: -1rem;
     color: #767676;
     font-weight: normal;
 }
 
-section>div>div.firstPart>div>div:nth-child(3)>a:nth-child(1)>button{
+section > div > div.firstPart > div > div:nth-child(3) > a:nth-child(1) > button {
     background: #1C60AD;
     color: white;
     height: 2.5rem;
@@ -451,7 +458,7 @@ section>div>div.firstPart>div>div:nth-child(3)>a:nth-child(1)>button{
     border: none;
 }
 
-section>div>div.firstPart>div>div:nth-child(3)>a:nth-child(2)>button{
+section > div > div.firstPart > div > div:nth-child(3) > a:nth-child(2) > button {
     margin-left: .8rem;
     border: 1px solid #a1a1a1;
     background: #F5F5F5;
@@ -460,32 +467,32 @@ section>div>div.firstPart>div>div:nth-child(3)>a:nth-child(2)>button{
     border-radius: .2rem;
 }
 
-section>div>div.firstPart>div>div:nth-child(3)>a>button>i{
+section > div > div.firstPart > div > div:nth-child(3) > a > button > i {
     font-size: 1.2rem;
 }
 
-section>div>div.secondPart{
+section > div > div.secondPart {
     display: flex;
     flex-flow: column;
 }
 
-section>div>div.secondPart>i{
+section > div > div.secondPart > i {
     text-align: center;
     font-size: 1.5rem;
     margin-top: -.3rem;
     margin-bottom: -.3rem;
 }
 
-section>div>div.secondPart>div{
+section > div > div.secondPart > div {
     display: flex;
     flex-flow: row wrap;
 }
 
-section>div>div.secondPart>div>div.sticker{
+section > div > div.secondPart > div > div.sticker {
     flex-wrap: wrap;
     width: 45%;
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 1.5rem;
     height: 8rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
@@ -493,32 +500,250 @@ section>div>div.secondPart>div>div.sticker{
     cursor: pointer;
 }
 
-section>div>div.secondPart>div>div.sticker>div{
+section > div > div.secondPart > div > div.sticker > div {
     position: absolute;
     width: 100%;
     height: 2.2rem;
     top: 5.8rem;
-    display:flex;
+    display: flex;
     flex-flow: row;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 0px 0px 6px 6px;
     align-items: center;
 }
 
-section>div>div.secondPart>div>div.sticker>div>h5{
+section > div > div.secondPart > div > div.sticker > div > h5 {
     margin-left: 1rem;
     margin-top: 9px;
     font-size: 1rem;
-    color:black;
+    color: black;
 }
 
+/*===============================================================*/
+/*===============================================================*/
+/*======================ELEMENTOS GUARDADOS======================*/
+/*===============================================================*/
+/*===============================================================*/
+
+section > div.elementosGuardados {
+    height: 3rem;
+    margin-top: -.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #F7F7F7;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1);
+}
+
+section > div.elementosGuardados > a > i {
+    color: #1C60AD;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+section > div.elementosGuardados > span {
+    color: #1C60AD;
+    font-size: 1.3rem;
+    margin-right: 10rem;
+}
+
+/*=========================================================*/
+/*=========================================================*/
+/*======================EDITAR PERFIL======================*/
+/*=========================================================*/
+/*=========================================================*/
+
+section > div.editarPerfil {
+    display: flex;
+    flex-flow: column;
+}
+
+section > div.editarPerfil > div:nth-child(1) {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+section > div.editarPerfil > div:nth-child(1) > a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 5%;
+}
+
+section > div.editarPerfil > div:nth-child(1) > span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-left: 33%;
+}
+
+section > div.editarPerfil > div:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+section > div.editarPerfil > div:nth-child(2) > i {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    margin-top: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+section > div.editarPerfil > div:nth-child(2) > img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 5rem;
+    margin-bottom: .6rem;
+}
+
+section > div.editarPerfil > div:nth-child(3) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section > div.editarPerfil > div:nth-child(3) > div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+section > div.editarPerfil > div:nth-child(3) > div > div > input {
+    background: none;
+    border: none;
+    text-indent: 6rem;
+}
+
+section > div.editarPerfil > div:nth-child(3) > div > div > input:focus{
+    outline: none;
+}
+
+/*==========================================================*/
+/*==========================================================*/
+/*======================Añadir Sticker======================*/
+/*==========================================================*/
+/*==========================================================*/
+
+div.anadirSticker > form > div:nth-child(1) {
+    background: white;
+    height: 3rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.anadirSticker > form > div:nth-child(1) > a {
+    color: black;
+    margin-left: 5%;
+}
+
+div.anadirSticker > form > div:nth-child(1) > a > i {
+    font-size: 2rem;
+}
+
+div.anadirSticker > form > div:nth-child(1) > span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+div.anadirSticker > form > div:nth-child(1) > button {
+    border: none;
+    background: none;
+    margin-right: 5%;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div {
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(1) {
+    width: 2rem;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(1) > i {
+    color: #838383;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) {
+    display: flex;
+    flex-flow: column;
+    margin-left: 10%;
+    width: 70%;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > span {
+    color: #838383;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: -1rem;
+    margin-bottom: .2rem;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #838383;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > input:focus{
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > textarea {
+    width: 100%;
+    height: 6rem;
+}
+
+.custom-input-file {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto 0;
+    min-height: 15px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+.custom-input-file > i{
+    color: #838383;
+    font-size: 3rem;
+    margin-bottom: .7rem;
+}
+
+.custom-input-file .input-file {
+    border: 10000px solid transparent;
+    cursor: pointer;
+    font-size: 10000px;
+    margin: 0;
+    opacity: 0;
+    outline: 0 none;
+    padding: 0;
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+}
 /*==================================================*/
 /*==================================================*/
 /*======================FOOTER======================*/
 /*==================================================*/
 /*==================================================*/
-
-footer>.menu{
+footer > .menu {
     background: white;
     display: flex;
     align-items: center;
@@ -528,24 +753,24 @@ footer>.menu{
     height: 60px;
 }
 
-footer>.menu>ul{
+footer > .menu > ul {
     text-decoration: none;
     list-style: none;
     width: 100%;
     text-align: center;
     padding: 0;
-    margin-top:1rem;
+    margin-top: 1rem;
 }
 
-footer>.menu>ul>li{
+footer > .menu > ul > li {
     display: inline;
     padding-left: 6.5%;
     padding-right: 6.5%;
 }
 
-footer>.menu>ul>li>a>i{
-    color:#1C60AD;
+footer > .menu > ul > li > a > i {
+    color: #1C60AD;
     font-size: 1.6rem;
-    cursor:pointer;
+    cursor: pointer;
 
 }

@@ -27,7 +27,7 @@
         <ul>
             <li><a href="{{route('paginaPrincipal')}}"><i class="fas fa-home"></i></a></li>
             <li><a href="#"><i class="fas fa-search"></i></a></li>
-            <li><a href="#"><i class="fas fa-plus-circle"></i></a></li>
+            <li><a href="{{route('anadirSticker')}}"><i class="fas fa-plus-circle"></i></a></li>
             <li><a href="{{route('perfiles')}}"><i class="fas fa-user"></i></a></li>
             <li><a href="#"><i class="fas fa-tools"></i></a></li>
         </ul>

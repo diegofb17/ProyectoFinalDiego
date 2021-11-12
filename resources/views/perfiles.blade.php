@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div>
-                    <a><button>Editar perfil</button></a>
+                    <a href="{{route('editarPerfil')}}"><button>Editar perfil</button></a>
                     <a href="{{route('elementosGuardados')}}"><button><i class="far fa-bookmark"></i></button></a>
                 </div>
             </div>

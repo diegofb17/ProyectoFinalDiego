@@ -30,4 +30,21 @@ class PaginaPrincipalController extends Controller
     {
         return view('elementosGuardados');
     }
+
+    public function editarPerfil()
+    {
+        return view('editarPerfil');
+    }
+
+    public function anadirSticker()
+    {
+        return view('anadirSticker');
+    }
+
+    public function storeSticker(Request $request)
+    {
+
+        dd($request->all());
+        return view('perfiles');
+    }
 }
