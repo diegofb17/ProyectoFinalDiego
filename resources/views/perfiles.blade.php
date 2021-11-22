@@ -35,29 +35,13 @@
             <i class="fas fa-list"></i>
             <hr/>
             <div>
+                @foreach($data['postsUser'] as $postUser)
                 <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
                     <div>
-                        <h5>Titulo sticker</h5>
+                        <h5>{{$postUser->title}}</h5>
                     </div>
                 </div>
-
-                <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
-                    <div>
-                        <h5>Titulo sticker</h5>
-                    </div>
-                </div>
-
-                <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
-                    <div>
-                        <h5>Titulo sticker</h5>
-                    </div>
-                </div>
-
-                <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
-                    <div>
-                        <h5>Titulo sticker</h5>
-                    </div>
-                </div>
+                    @endforeach
             </div>
         </div>
     </div>

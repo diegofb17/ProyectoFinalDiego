@@ -4,9 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Archivo extends Model
+class Categorie extends Model
 {
     protected $fillable = [
-        'name', 'url',
+        'name'
     ];
+
+    protected $table = 'categories';
 }

@@ -80,19 +80,6 @@ section > a > div.sticker > div:nth-child(2) > h5 {
     color: black;
 }
 
-section > a > div.sticker > div:nth-child(2) > div {
-    width: 3rem;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 0.5rem;
-}
-
-section > a > div.sticker > div:nth-child(2) > div > i {
-    color: #1C60AD;
-    font-size: 1.4rem;
-    cursor: pointer;
-}
-
 /*==================================================*/
 /*==================================================*/
 /*======================STICKER ABIERTO======================*/
@@ -619,7 +606,7 @@ section > div.editarPerfil > div:nth-child(3) > div > div > input {
     text-indent: 6rem;
 }
 
-section > div.editarPerfil > div:nth-child(3) > div > div > input:focus{
+section > div.editarPerfil > div:nth-child(3) > div > div > input:focus {
     outline: none;
 }
 
@@ -628,6 +615,10 @@ section > div.editarPerfil > div:nth-child(3) > div > div > input:focus{
 /*======================Añadir Sticker======================*/
 /*==========================================================*/
 /*==========================================================*/
+
+div.anadirSticker {
+    margin-bottom: 3rem;
+}
 
 div.anadirSticker > form > div:nth-child(1) {
     background: white;
@@ -696,7 +687,7 @@ div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > input {
     border-bottom: 2px solid #838383;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > input:focus{
+div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > input:focus {
     outline: none;
     border-bottom: 2px solid blue;
 }
@@ -720,7 +711,7 @@ div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > textarea 
     padding: 2rem;
 }
 
-.custom-input-file > i{
+.custom-input-file > i {
     color: #838383;
     font-size: 3rem;
     margin-bottom: .7rem;
@@ -738,11 +729,220 @@ div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > textarea 
     right: -1000px;
     top: -1000px;
 }
+
+/*==================================================*/
+/*==================================================*/
+/*======================CONFIG======================*/
+/*==================================================*/
+/*==================================================*/
+
+section > div.configuracion > hr {
+    width: 86%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 1.5px;
+    color: #858585;
+}
+
+section > div.configuracion > div:nth-child(1) {
+    border-bottom: 2px solid #D1D1D1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+section > div.configuracion > div:nth-child(1) > p {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: auto;
+}
+
+section > div.configuracion > div.bloqueConfiguracion {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+section > div.configuracion > div.bloqueConfiguracion > p {
+    color: #858585;
+}
+
+section > div.configuracion > div.bloqueConfiguracion > div {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+section > div.configuracion > div.bloqueConfiguracion > div > i {
+    font-size: 1rem;
+    width: 1.3rem;
+}
+
+section > div.configuracion > div.bloqueConfiguracion > div > a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+/*==============================================================*/
+/*==============================================================*/
+/*======================Administrar cuenta======================*/
+/*==============================================================*/
+/*==============================================================*/
+
+section > div.administrarCuenta {
+    display: flex;
+    flex-flow: column;
+}
+
+section > div.administrarCuenta > div:nth-child(1) {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+section > div.administrarCuenta > div:nth-child(1) > a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 5%;
+}
+
+section > div.administrarCuenta > div:nth-child(1) > span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: 25%;
+}
+
+section > div.administrarCuenta > div:nth-child(2) {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div:nth-child(1) {
+    display: flex;
+    flex-flow: column;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div:nth-child(1) > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div:nth-child(1) > div > input {
+    background: none;
+    border: none;
+    text-indent: 6rem;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div:nth-child(1) > input:focus {
+    outline: none;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div:nth-child(1) > input {
+    background: none;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div:nth-child(1) > div > input:focus {
+    outline: none;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div:nth-child(1) > hr {
+    height: 1.5px;
+    color: black;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div > p {
+    color: #858585;
+    margin-bottom: 1.5rem;
+}
+
+section > div.administrarCuenta > div:nth-child(2) > div > a {
+    color: black;
+    text-decoration: none;
+}
+
+/*==================================================*/
+/*==================================================*/
+/*======================Search======================*/
+/*==================================================*/
+/*==================================================*/
+section > div.busqueda {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*De aqui al final es el sticker*/
+div.postsBusqueda > a {
+    height: 15rem;
+    margin-top: 1.5rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div.postsBusqueda > a > div.sticker {
+
+    height: 15rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*Titulo*/
+div.postsBusqueda > a > div.sticker > div:nth-child(1) {
+    background: rgba(25, 85, 152, 0.6);
+    height: 2.5rem;
+    margin-top: 1rem;
+    position: absolute;
+    width: 12rem;
+}
+
+div.postsBusqueda > a > div.sticker > div > p {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+div.postsBusqueda > a > div.sticker > div:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 2.7rem;
+    left: 0px;
+    top: 12.3rem;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 6px 6px;
+    align-items: center;
+    cursor: default;
+}
+
+div.postsBusqueda > a > div.sticker > div:nth-child(2) > h5 {
+    margin-left: 1rem;
+    margin-top: 7px;
+    font-size: 1rem;
+    color: black;
+}
+
 /*==================================================*/
 /*==================================================*/
 /*======================FOOTER======================*/
 /*==================================================*/
 /*==================================================*/
+
 footer > .menu {
     background: white;
     display: flex;
@@ -751,6 +951,7 @@ footer > .menu {
     bottom: 0;
     width: 100%;
     height: 60px;
+    z-index: 99;
 }
 
 footer > .menu > ul {
@@ -773,4 +974,32 @@ footer > .menu > ul > li > a > i {
     font-size: 1.6rem;
     cursor: pointer;
 
+}
+
+/*COSAS*/
+.compartirPerfil {
+    display: flex;
+    flex-flow: row;
+}
+
+.compartirPerfil > div {
+    margin-left: .3rem;
+}
+
+.compartirPerfil > div > a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#myPopup {
+    background: #1C60AD;
+    border: none;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#myPopup > p {
+    color: white;
 }

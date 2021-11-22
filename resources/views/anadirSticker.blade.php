@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="anadirSticker">
-        <form action="{{route('storeSticker')}}" method="post">
+        <form action="{{route('storeSticker')}}"  method="post" enctype="multipart/form-data">
             <div>
                 <a href="{{url()->previous()}}"><i class="fas fa-times"></i></a>
                 <span>Añade un sitio</span>
@@ -44,7 +44,8 @@
                     <div class="inputFileContainer">
                         {{--Aqui va un drag and drop--}}
                         <div class="custom-input-file">
-                            <input type="file" id="imagenes" class="imagenes input-file" value="" multiple="multiple">
+                            {{--<input type="file" id="imagenes" class="imagenes input-file" multiple="multiple">--}}
+                            <input accept="image/*"  id="imagenes" type="file" name="imagenes" class="imagenes input-file" multiple="multiple">
                             <i class="fas fa-download"></i><br/>Choose a file
                         </div>
                     </div>
@@ -53,4 +54,13 @@
             @csrf
         </form>
     </div>
+@endsection
+
+@section('js')
+    <script>
+        Dropzone.options.myAwesomeDropzone = {
+            paramName: "file", // Las imágenes se van a usar bajo este nombre de parámetro
+            maxFilesize: 2 // Tamaño máximo en MB
+        };
+    </script>
 @endsection

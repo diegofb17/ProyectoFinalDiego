@@ -1,19 +1,16 @@
 @extends('layout')
 
 @section('content')
-    <a href="{{route('stickerAbierto')}}">
-        <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
-
-            <div>
-                <p>Titulo del sticker</p>
-            </div>
-            <div>
-                <h5>Categoría</h5>
+    @foreach($data['posts'] as $post)
+        <a href="{{ route("stickerAbierto",$post->id_post) }}">
+            <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
                 <div>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <i class="far fa-bookmark"></i>
+                    <p>{{$post->title}}</p>
+                </div>
+                <div>
+                    <h5>{{$post->name}}</h5>
                 </div>
             </div>
-        </div>
-    </a>
+        </a>
+    @endforeach
 @endsection
