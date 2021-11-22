@@ -35,8 +35,15 @@
             </div>
             <div>
                 <i class="fas fa-sign-out-alt"></i>
-                <span>Cerrar sesión</span>
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    <span>Cerrar sesión</span>
+                </a>
             </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         </div>
     </div>
 @endsection

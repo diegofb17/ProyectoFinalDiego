@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/paginaPrincipal', 'App\Http\Controllers\PaginaPrincipalController@index')->name('paginaPrincipal');
 Route::get('/stickerAbierto/{id}', 'App\Http\Controllers\PaginaPrincipalController@stickerAbierto')->name('stickerAbierto');
