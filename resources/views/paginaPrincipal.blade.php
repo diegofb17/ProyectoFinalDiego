@@ -3,7 +3,7 @@
 @section('content')
     @foreach($data['posts'] as $post)
         <a href="{{ route("stickerAbierto",$post->id_post) }}">
-            <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
+            <div class="sticker" style="background-image: url('imagesStored/{{$post->picture}}');background-size: cover;">
                 <div>
                     <p>{{$post->title}}</p>
                 </div>

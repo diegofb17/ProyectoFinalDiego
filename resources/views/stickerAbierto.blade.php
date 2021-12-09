@@ -1,36 +1,45 @@
 @extends('layout')
 
 @section('content')
-    <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
+    <div class="sticker" style="background-image: url('{{asset('imagesStored/'.$data['post']['picture'])}}');background-size: cover;">
         <div>
-            <h5>Categoría</h5>
+            <h5>{{$data['post']['name']}}</h5>
             <div>
                 <i class="fas fa-share-alt"></i>
                 <i class="fas fa-map-marker-alt"></i>
-                <i class="far fa-bookmark"></i>
+                @if($data['elementoGuardado'] == false)
+                    <a href="{{ route("addFavoriteElement",$data['post']['id_post']) }}"><i class="far fa-bookmark"></i></a>
+                @else
+                    <a href="{{ route("deleteFavoriteElement",$data['post']['id_post']) }}"><i class="fas fa-bookmark"></i></a>
+                @endif
             </div>
         </div>
     </div>
     <div class="stickerBody">
-        <h3>{{$data['post'][0]['title']}}</h3>
-        <p>{{$data['post'][0]['text']}}</p>
+        <h3>{{$data['post']['title']}}</h3>
+        <p>{{$data['post']['text']}}</p>
         <div class="imagenesSticker">
-            <img src={{asset("images/arcos_felipe.jpg")}}>
-            <img src={{asset("images/arcos_felipe.jpg")}}>
-            <img src={{asset("images/arcos_felipe.jpg")}}>
-            <img src={{asset("images/arcos_felipe.jpg")}}>
+            @foreach($data['images'] as $image)
+                <img src="{{ asset('imagesStored/'.$image) }}">
+            @endforeach
         </div>
 
         <div class="userProfile">
-            <p>Subido por {{$data['post'][0]['name_user']}}</p>
-            <a href="{{route('perfiles')}}"><img src="images/foto_usuario.jfif"></a>
+            <p>Subido por {{$data['post']['name_user']}}</p>
+            <a href="{{ route('perfiles', $data['post']['id']) }}">
+                @if($data['post']['profile_image']!=null)
+                    <img src="{{asset('imagesStored/'.$data['post']['profile_image'])}}">
+                @else
+                    <img src="{{asset('imagesStored/usuarioDefecto.png')}}">
+                @endif
+            </a>
         </div>
 
         <div class="opinions">
             <div>
                 <i class="fas fa-star"></i>
                 {{--En este span va la media de las valoraciones--}}
-                <span>{{$data['mediaPost']}}/5 - <a href="{{route('opiniones',$id)}}"><span class="underline">{{$data['numOpiniones']}} Opiniones</span></a></span>
+                <span>{{number_format($data['mediaPost'], 1)}}/5 - <a href="{{route('opiniones',$id)}}"><span class="underline">{{$data['numOpiniones']}} Opiniones</span></a></span>
             </div>
             <div>
                 <span>Valora este sitio</span>
@@ -39,13 +48,14 @@
                 </div>
             </div>
             <p id="errorOpiniones" style="color: red;font-weight: bold"></p>
-            <textarea placeholder="Opinion del lugar" rows="5" maxlength="200" name="text_opinion" id="text_opinion"></textarea>
+            <textarea placeholder="Opinion del lugar" maxlength="300" rows="5" name="text_opinion" id="text_opinion"></textarea>
 
             <form action="{{route('storeOpinion')}}" method="post">
                 @csrf
                 <button type="submit" id="enviarOpinion">Enviar opinion</button>
                 <input type="hidden" id="puntuationOpinion" name="puntuationOpinion">
                 <input type="hidden" id="textOpinion" name="textOpinion">
+                <input type="hidden" id="idPostOpinion" name="idPostOpinion" value="{{$data['post']['id_post']}}">
             </form>
         </div>
     </div>
@@ -57,7 +67,7 @@
             if($('#puntuationOpinion').val() != '' && $('#text_opinion').val().length >= 45) {
                 $('#textOpinion').val($('#text_opinion').val())
             }else{
-                if($('#text_opinion').val().length < 45){
+                if($('#text_opinion').val().length < 35){
                     if($('#text_opinion').val().length == 0){
                         $('#errorOpiniones').text('Campo de opinion vacío')
                     }else{

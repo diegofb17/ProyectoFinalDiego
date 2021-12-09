@@ -10,8 +10,11 @@ class Post extends Model
         'id_user',
         'id_categorie',
         'title',
-        'pictures',
-        'text'
+        'picture',
+        'text',
+        'longitude',
+        'latitude',
+        'accepted'
     ];
 
     protected $table = 'posts';

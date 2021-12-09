@@ -10,4 +10,8 @@ class CategorieRepository
     {
         return Categorie::all();
     }
+
+    public function listAllForSelect(){
+        return Categorie::all()->pluck('name','id_categorie');
+    }
 }

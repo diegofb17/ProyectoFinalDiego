@@ -8,7 +8,9 @@ class Opinion extends Model
 {
     protected $fillable = [
         'punctuation',
-        'text'
+        'text',
+        'id_post',
+        'id_user'
     ];
 
     protected $table = 'opinions';

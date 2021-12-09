@@ -3,8 +3,12 @@
 @section('content')
 
     <div class="contenedor">
-        <i class="fas fa-arrow-left"></i>
-        <p>Opiniones</p>
+        <div class="goBack">
+            <a href="{{url()->previous()}}">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <span>Opiniones</span>
+        </div>
         <div class="opiniones">
             <i class="fas fa-star"></i>
             <p>{{$data['mediaPost']}}/5 - {{$data['numOpiniones']}} opiniones</p>
@@ -15,21 +19,41 @@
             @foreach($data['opinion'] as $opinion)
                 <div class="user">
                     <div class="userInfo">
-                        <span>Kerry</span>
+                        <span>{{$opinion->name}}</span>
                         <div>
-                            <a href="#">
-                                <img src="images/foto_usuario.jfif">
+                            <a href="{{ route('perfiles', $opinion->id) }}">
+                                @if($opinion->profile_image != null)
+                                    <img src="{{asset('imagesStored/'.$opinion->profile_image)}}">
+                                @else
+                                    <img src="{{asset('imagesStored/usuarioDefecto.png')}}">
+                                @endif
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
                     </div>
                     <div class="textOpinion">
-                        <p>Muy bien</p>
-                        <p>Lorem ipsum dolor sit amet, aquarius consectetur adipiscing elit. Aliquam id ornare leo, eu
-                            auctor magna.
-                        </p>
-                        <p>oct 2020</p>
+                        @switch($opinion->punctuation)
+                            @case('1')
+                                <p>Muy mal</p>
+                            @break
+                            @case('2')
+                                <p>Mal</p>
+                            @break
+                            @case('3')
+                                <p>Regular</p>
+                            @break
+                            @case('4')
+                                <p>Bien</p>
+                            @break
+                            @case('5')
+                                <p>Muy bien</p>
+                            @break
+                        @endswitch
+                        <p>{{$opinion->text}}</p>
+                        <p>{{\Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $opinion->created_at)->format('d-m-Y')}}</p>
+
                     </div>
+                    <hr>
                 </div>
             @endforeach
         </div>

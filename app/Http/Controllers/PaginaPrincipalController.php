@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\CategorieRepository;
+use App\Repositories\ContactRepository;
 use App\Repositories\OpinionRepository;
 use App\Repositories\PostRepository;
 use App\Repositories\UserRepository;
@@ -13,90 +14,42 @@ class PaginaPrincipalController extends Controller
     private $postRepository;
     private $categorieRepository;
     private $opinionRepository;
-    private $userRepository;
+    private $contactRepository;
 
     public function __construct(
         PostRepository $postRepository,
         CategorieRepository $categorieRepository,
         OpinionRepository $opinionRepository,
-        UserRepository $userRepository
+        ContactRepository $contactRepository
     )
     {
         $this->postRepository = $postRepository;
         $this->categorieRepository = $categorieRepository;
         $this->opinionRepository = $opinionRepository;
-        $this->userRepository = $userRepository;
+        $this->contactRepository = $contactRepository;
     }
 
     public function index()
     {
-        $data['posts'] = $this->postRepository->listAll();
+        $idUser = auth()->user()->id;
+        $usersFollowed=$this->contactRepository->listFollowed($idUser);
+
+        foreach ($usersFollowed as $userFollowed){
+            $usuariosSeguidos[]=$userFollowed->id_followed_user;
+        }
+
+        $data['posts'] = $this->postRepository->listAllAcceptedByFollow($usuariosSeguidos);
+
         return view('paginaPrincipal', ['data' => $data]);
-    }
-
-    public function stickerAbierto($id)
-    {
-        $data['post'] = $this->postRepository->getById($id);
-        $data['opinion'] = $this->opinionRepository->listOpinionByPostId($id);
-        $contadorOpiniones = 0;
-        $estrellasTotal = 0;
-        foreach ($data['opinion'] as $opinion){
-            $contadorOpiniones++;
-            $estrellasTotal+=$opinion->punctuation;
-        }
-
-        $data['mediaPost'] = $estrellasTotal / $contadorOpiniones;
-        $data['numOpiniones'] = $contadorOpiniones;
-
-        return view('stickerAbierto',[
-            'data' => $data,
-            'id' => $id
-        ]);
-    }
-
-    public function opiniones($id)
-    {
-        $data['opinion'] = $this->opinionRepository->listOpinionByPostId($id);
-        $contadorOpiniones = 0;
-        $estrellasTotal = 0;
-        foreach ($data['opinion'] as $opinion){
-            $contadorOpiniones++;
-            $estrellasTotal+=$opinion->punctuation;
-        }
-        dd($data['opinion']);
-        $data['mediaPost'] = $estrellasTotal / $contadorOpiniones;
-        $data['numOpiniones'] = $contadorOpiniones;
-
-        return view('opiniones',['data' => $data]);
-    }
-
-    public function perfiles()
-    {
-        $data['postsUser'] = $this->postRepository->listByUserId(1);
-        return view('perfiles',['data'=>$data]);
-    }
-
-    public function elementosGuardados()
-    {
-        return view('elementosGuardados');
     }
 
     public function editarPerfil()
     {
-        return view('editarPerfil');
+        $data = auth()->user();
+
+        return view('editarPerfil',['data'=>$data]);
     }
 
-    public function anadirSticker()
-    {
-        return view('anadirSticker');
-    }
-
-    public function storeSticker(Request $request)
-    {
-
-        dd($request->all());
-        return view('perfiles');
-    }
 
     public function configuracion()
     {
@@ -116,9 +69,4 @@ class PaginaPrincipalController extends Controller
         return view('administrarCuenta');
     }
 
-    public function storeOpinion(Request $request)
-    {
-        dd($request->all());
-        return view('stickerAbierto');
-    }
 }

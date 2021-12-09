@@ -4,7 +4,7 @@
     <title>Home</title>
     <meta charset="UTF-8">
     <meta name="title" content="Home">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href={{asset("images/favicon.png")}} type="image/x-icon">
     <link rel="stylesheet" href={{asset('css/styles.css')}}/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -23,7 +23,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
-<body style="background: #F5F5F5;font-family: 'Roboto', sans-serif;">
+<body>
 <header>
     <img src={{asset("images/logo.png")}} class="p-2" width="250">
 </header>
@@ -36,12 +36,11 @@
             <li><a href="{{route('paginaPrincipal')}}"><i class="fas fa-home"></i></a></li>
             <li><a href="{{route('busqueda')}}"><i class="fas fa-search"></i></a></li>
             <li><a href="{{route('anadirSticker')}}"><i class="fas fa-plus-circle"></i></a></li>
-            <li><a href="{{route('perfiles')}}"><i class="fas fa-user"></i></a></li>
+            <li><a href="{{route('perfiles',auth()->user()->id)}}"><i class="fas fa-user"></i></a></li>
             <li><a href="{{route('configuracion')}}"><i class="fas fa-tools"></i></a></li>
         </ul>
     </div>
 </footer>
-
 @yield('js')
 </body>
 </html>

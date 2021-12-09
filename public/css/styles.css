@@ -1,3 +1,8 @@
+body{
+    background: #F5F5F5 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
 /*HEADER*/
 header {
     background: white;
@@ -33,6 +38,10 @@ section > a {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
+}
+
+section > a:last-child{
+    margin-bottom: 6rem;
 }
 
 section > a > div.sticker {
@@ -78,6 +87,19 @@ section > a > div.sticker > div:nth-child(2) > h5 {
     margin-top: 7px;
     font-size: 1rem;
     color: black;
+}
+
+section > a > div.sticker > div:nth-child(2) > div {
+    width: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+section > a > div.sticker > div:nth-child(2) > div > i {
+    color: #1C60AD;
+    font-size: 1.4rem;
+    cursor: pointer;
 }
 
 /*==================================================*/
@@ -126,6 +148,12 @@ section > div.sticker > div > div {
 }
 
 section > div.sticker > div > div > i {
+    color: #1C60AD;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+section > div.sticker > div > div > a > i {
     color: #1C60AD;
     font-size: 1.4rem;
     cursor: pointer;
@@ -272,18 +300,30 @@ div.contenedor {
     margin: auto;
     margin-top: 1.5rem;
     margin-bottom: 4rem;
+    display: flex;
+    flex-flow: column;
 }
 
-div.contenedor > i {
+div.contenedor > div.goBack{
+    flex-flow: row;
+}
+
+div.contenedor > div.goBack > a{
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+div.contenedor > div.goBack > a > i {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: black;
 }
 
 div.contenedor > hr {
     border: 1px solid black;
 }
 
-div.contenedor > p {
+div.contenedor > div.goBack > span {
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -306,6 +346,7 @@ div.contenedor > div.opiniones > p {
     font-weight: 600;
     color: #3a3a3a;
     margin-top: 1rem;
+    font-size: 1rem;
 }
 
 div.contenedor > div.nivelOpinion > div {
@@ -352,6 +393,8 @@ div.user > div.userInfo > div > a {
 div.user > div.textOpinion {
     margin-top: 1rem;
     width: 98%;
+    display: flex;
+    flex-flow: column;
 }
 
 div.user > div.textOpinion > p:nth-child(2) {
@@ -383,17 +426,28 @@ section > div > div.firstPart > div:nth-child(1) {
     height: 2.1rem;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 1rem;
 }
 
 section > div > div.firstPart > div:nth-child(1) > span {
-    font-size: .9rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
-section > div > div.firstPart > div:nth-child(1) > i {
+section > div > div.firstPart > div:nth-child(1) > a{
+    margin-left: 1.5rem;
+}
+
+section > div > div.firstPart > div:nth-child(1) > a > i{
     font-size: 1.3rem;
+    color: black;
+}
+
+section > div > div.firstPart > div:nth-child(1) > i{
+    font-size: 1.3rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
 }
 
 section > div > div.firstPart > div:nth-child(2) {
@@ -473,13 +527,20 @@ section > div > div.secondPart > i {
 section > div > div.secondPart > div {
     display: flex;
     flex-flow: row wrap;
-}
-
-section > div > div.secondPart > div > div.sticker {
-    flex-wrap: wrap;
-    width: 45%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
+    justify-content: space-between;
+    margin-top: -1rem;
+}
+
+section > div > div.secondPart > div > a{
+    width: 48%;
+}
+
+section > div > div.secondPart > div > a > div.sticker {
+    flex-wrap: wrap;
+    width: 100%;
     margin-top: 1.5rem;
     height: 8rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
@@ -487,7 +548,7 @@ section > div > div.secondPart > div > div.sticker {
     cursor: pointer;
 }
 
-section > div > div.secondPart > div > div.sticker > div {
+section > div > div.secondPart > div > a > div.sticker > div {
     position: absolute;
     width: 100%;
     height: 2.2rem;
@@ -499,7 +560,7 @@ section > div > div.secondPart > div > div.sticker > div {
     align-items: center;
 }
 
-section > div > div.secondPart > div > div.sticker > div > h5 {
+section > div > div.secondPart > div > a > div.sticker > div > h5 {
     margin-left: 1rem;
     margin-top: 9px;
     font-size: 1rem;
@@ -545,68 +606,80 @@ section > div.editarPerfil {
     flex-flow: column;
 }
 
-section > div.editarPerfil > div:nth-child(1) {
+section > div.editarPerfil > form > div:nth-child(1) {
     height: 2.5rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-section > div.editarPerfil > div:nth-child(1) > a {
+section > div.editarPerfil > form > div:nth-child(1) > a {
     color: black;
     text-decoration: none;
     font-size: 1.5rem;
     margin-left: 5%;
 }
 
-section > div.editarPerfil > div:nth-child(1) > span {
+section > div.editarPerfil > form > div:nth-child(1) > span {
     font-weight: bold;
     font-size: 1.1rem;
     text-align: center;
-    margin-left: 33%;
 }
 
-section > div.editarPerfil > div:nth-child(2) {
+section > div.editarPerfil > form > div:nth-child(1) > button {
+    margin-right: 5%;
+    border:none;
+    background: none;
+    font-size: 1.1rem;
+}
+
+section > div.editarPerfil > form > div:nth-child(2) {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     margin-top: 1rem;
+    width: 7rem;
 }
 
-section > div.editarPerfil > div:nth-child(2) > i {
+section > div.editarPerfil > form > div:nth-child(2) > i {
     font-size: 2rem;
     color: white;
     position: absolute;
     margin-top: 1.2rem;
-    margin-left: 1.2rem;
+    margin-left: 1.4rem;
 }
 
-section > div.editarPerfil > div:nth-child(2) > img {
-    width: 4.5rem;
-    height: 4.5rem;
+section > div.editarPerfil > form > div:nth-child(2) > img {
+    width: 5rem;
+    height: 5rem;
     border-radius: 5rem;
-    margin-bottom: .6rem;
+    margin-top: -0.4rem;
+    margin-bottom: .7rem;
 }
 
-section > div.editarPerfil > div:nth-child(3) {
+section > div.editarPerfil > form > div:nth-child(2) > label {
+    cursor: pointer;
+}
+
+section > div.editarPerfil > form > div:nth-child(3) {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
-section > div.editarPerfil > div:nth-child(3) > div {
+section > div.editarPerfil > form > div:nth-child(3) > div {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     margin-top: 1rem;
 }
 
-section > div.editarPerfil > div:nth-child(3) > div > div > input {
+section > div.editarPerfil > form > div:nth-child(3) > div > div > input {
     background: none;
     border: none;
-    text-indent: 6rem;
 }
 
-section > div.editarPerfil > div:nth-child(3) > div > div > input:focus {
+section > div.editarPerfil > form > div:nth-child(3) > div > div > input:focus {
     outline: none;
 }
 
@@ -992,6 +1065,11 @@ footer > .menu > ul > li > a > i {
     font-weight: normal;
 }
 
+/*=======================================*/
+/*==============Variado==================*/
+/*=======================================*/
+
+
 #myPopup {
     background: #1C60AD;
     border: none;
@@ -1002,4 +1080,14 @@ footer > .menu > ul > li > a > i {
 
 #myPopup > p {
     color: white;
+}
+
+#categoriaSelect{
+    margin-bottom: 1.2rem;
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
