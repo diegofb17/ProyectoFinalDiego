@@ -8,7 +8,7 @@ class UserRepository
 {
     public function getById($id)
     {
-        return User::where('id',$id)
+        return User::where('id', $id)
             ->get()->first();
     }
 }

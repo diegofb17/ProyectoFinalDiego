@@ -4,7 +4,7 @@
     <div class="editarPerfil">
         <form action="{{route('updateProfile')}}" method="post" enctype="multipart/form-data">
             <div>
-                <a href="{{route('perfiles')}}">
+                <a href="{{route('perfiles',$data['id'])}}">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 <span>Editar perfil</span>
@@ -12,7 +12,11 @@
             </div>
             <div>
                 <i class="camarita fas fa-image"></i>
-                <img src="{{asset('imagesStored/'.$data['profile_image'])}}">
+                @if($data['profile_image']!=null)
+                    <img src="{{asset('imagesStored/'.$data['profile_image'])}}">
+                @else
+                    <img src="{{asset('imagesStored/usuarioDefecto.png')}}">
+                @endif
                 <label for="imagenPerfil" class="imagenPerfil">Cambiar foto</label>
                 <input style="visibility: hidden" accept="image/*" id="imagenPerfil" type="file" name="imagenPerfil" class="imagenes input-file">
             </div>

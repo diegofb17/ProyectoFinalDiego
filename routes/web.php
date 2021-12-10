@@ -22,6 +22,7 @@ Route::post('/storeOpinion', 'App\Http\Controllers\StoreOpinionController@storeO
 Route::get('/opiniones/{id}', 'App\Http\Controllers\OpinionController@opiniones')->name('opiniones');
 Route::get('/perfiles/{id}', 'App\Http\Controllers\PerfilController@perfiles')->name('perfiles');
 Route::get('/seguirUsuario/{id}', 'App\Http\Controllers\SeguirUsuarioController@seguirUsuario')->name('seguirUsuario');
+Route::get('/dejarSeguirUsuario/{id}', 'App\Http\Controllers\DejarSeguirUsuarioController@dejarSeguirUsuario')->name('dejarSeguirUsuario');
 Route::get('/elementosGuardados', 'App\Http\Controllers\ElementoGuardadoController@elementosGuardados')->name('elementosGuardados');
 Route::get('/editarPerfil', 'App\Http\Controllers\PaginaPrincipalController@editarPerfil')->name('editarPerfil');
 Route::post('/updateProfile', 'App\Http\Controllers\UpdateProfileController@updateProfile')->name('updateProfile');

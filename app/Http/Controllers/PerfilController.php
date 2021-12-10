@@ -43,9 +43,13 @@ class PerfilController extends Controller
             //Datos de ese usuario
             $data['userInfo'] = $this->userRepository->getById($id);
 
-            //Lo sigo o no lo sigo
+            $followedOrNot = $this->contactRepository->getIfUserIsFollowed($idUser, $id);
             $data['seguido'] = false;
 
+            //Lo sigo o no lo sigo
+            if($followedOrNot->count() > 0){
+                $data['seguido'] = true;
+            }
 
             //No es el usuario logueado
             $data['userLogueado'] = false;

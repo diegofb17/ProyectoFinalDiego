@@ -102,11 +102,11 @@ section > a > div.sticker > div:nth-child(2) > div > i {
     cursor: pointer;
 }
 
-/*==================================================*/
-/*==================================================*/
+/*===========================================================*/
+/*===========================================================*/
 /*======================STICKER ABIERTO======================*/
-/*==================================================*/
-/*==================================================*/
+/*===========================================================*/
+/*===========================================================*/
 
 section > div.sticker {
     width: 80%;
@@ -197,6 +197,7 @@ section > div.stickerBody > p {
     width: 48%;
     border-radius: 8px;
     margin-top: 1rem;
+    height: 8rem;
 }
 
 section > div.stickerBody > div.userProfile {
@@ -491,12 +492,37 @@ section > div > div.firstPart > div > div > div > p:nth-child(2) {
 }
 
 section > div > div.firstPart > div > div:nth-child(3) > a:nth-child(1) > button {
-    background: #1C60AD;
-    color: white;
     height: 2.5rem;
-    width: 8rem;
     border-radius: .2rem;
     border: none;
+    background: #1C60AD;
+    color:white;
+    width: 8.4rem;
+}
+
+.followButton{
+    color: white;
+    background: #1C60AD !important;
+    width: 8.4rem;
+}
+
+.followButton:hover{
+    background: #144f93;
+}
+
+.unfollowButton{
+    background: none;
+    color: black;
+    width: 8.4rem;
+    border: 1px solid #a1a1a1 !important;
+}
+
+.unfollowButton:hover{
+    background: #e5e5e5;
+}
+
+.instagramButton:hover{
+    background: #e5e5e5 !important;
 }
 
 section > div > div.firstPart > div > div:nth-child(3) > a:nth-child(2) > button {

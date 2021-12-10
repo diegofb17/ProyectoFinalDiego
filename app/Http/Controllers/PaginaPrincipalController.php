@@ -31,6 +31,7 @@ class PaginaPrincipalController extends Controller
 
     public function index()
     {
+        $usuariosSeguidos = [];
         $idUser = auth()->user()->id;
         $usersFollowed=$this->contactRepository->listFollowed($idUser);
 

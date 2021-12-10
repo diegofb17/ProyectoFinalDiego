@@ -61,7 +61,7 @@ class StoreStickerController extends Controller
             }
         }
 
-        return redirect()->route('perfiles');
+        return redirect()->route('perfiles',auth()->user()->id);
     }
 
     private function validateRequest($request)
