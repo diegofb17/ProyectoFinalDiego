@@ -53,9 +53,7 @@
                 <div class="bloqueFormInputs">
                     <div><i class="fas fa-images"></i></div>
                     <div class="inputFileContainer">
-                        {{--Aqui va un drag and drop--}}
                         <div class="custom-input-file">
-                            {{--<input type="file" id="imagenes" class="imagenes input-file" multiple="multiple">--}}
                             <input accept="image/*"  id="imagenes" type="file" name="imagenes[]" class="imagenes input-file" multiple="multiple">
                             <i class="fas fa-download"></i><br/>Choose a file
                         </div>
@@ -69,11 +67,6 @@
 
 @section('js')
     <script>
-        Dropzone.options.myAwesomeDropzone = {
-            paramName: "file", // Las imágenes se van a usar bajo este nombre de parámetro
-            maxFilesize: 2 // Tamaño máximo en MB
-        };
-
         $(document).ready(function() {
             $('.categorias').select2();
         });

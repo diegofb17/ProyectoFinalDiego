@@ -33,13 +33,13 @@
                 </div>
                 <div>
                     @if($data['userLogueado'] == true)
-                        <a href="{{route('editarPerfil')}}"><button>Editar perfil</button></a>
-                        <a href="{{route('elementosGuardados')}}"><button><i class="far fa-bookmark"></i></button></a>
+                        <a href="{{route('editarPerfil')}}"><button class="btn editarPerfilButton">Editar perfil</button></a>
+                        <a href="{{route('elementosGuardados')}}"><button class="btn elementosGuardados"><i class="far fa-bookmark"></i></button></a>
                     @else
                         @if($data['seguido'])
                             <a href="{{route('dejarSeguirUsuario',$data['userInfo']->id)}}"><button class="unfollowButton">Dejar de seguir</button></a>
                         @else
-                            <a href="{{route('seguirUsuario',$data['userInfo']->id)}}"><button class="followButton">Seguir</button></a>
+                            <a href="{{route('seguirUsuario',$data['userInfo']->id)}}"><button class="btn followButton">Seguir</button></a>
                         @endif
                         <a href="https://www.instagram.com/{{$data['userInfo']->instagram_user}}"><button class="instagramButton"><i class="fab fa-instagram"></i></button></a>
                     @endif

@@ -15,6 +15,7 @@ class StoreOpinionController extends Controller
     )
     {
         $this->opinionRepository = $opinionRepository;
+        $this->middleware('auth');
     }
 
     public function storeOpinion(Request $request)
@@ -26,8 +27,16 @@ class StoreOpinionController extends Controller
             'text' => $request->get('textOpinion')
         ];
 
-        $this->opinionRepository->createOpinion($data);
+        $opinion = $this->opinionRepository->userAlreadyOpined($data['id_user'],$data['id_post']);
+        $data['error'] = false;
 
-        return redirect()->route('stickerAbierto',$request->get('idPostOpinion'));
+        if ($opinion == 0) {
+            $this->opinionRepository->createOpinion($data);
+
+        } else {
+            $data['error'] = true;
+        }
+
+        return redirect()->route('stickerAbierto', $request->get('idPostOpinion'));
     }
 }

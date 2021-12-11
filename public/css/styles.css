@@ -1,4 +1,4 @@
-body{
+body {
     background: #F5F5F5 !important;
     font-family: 'Roboto', sans-serif !important;
 }
@@ -40,7 +40,7 @@ section > a {
     margin-left: auto;
 }
 
-section > a:last-child{
+section > a:last-child {
     margin-bottom: 6rem;
 }
 
@@ -118,7 +118,7 @@ section > div.sticker {
     border-radius: 6px;
 }
 
-section > div.sticker > div {
+section >div.sticker > div {
     position: absolute;
     width: 100%;
     height: 2.7rem;
@@ -132,7 +132,7 @@ section > div.sticker > div {
     align-items: center;
 }
 
-section > div.sticker > div > h5 {
+section >div.sticker > div > h5 {
     margin-left: 1rem;
     margin-top: 7px;
     font-size: 1rem;
@@ -140,31 +140,37 @@ section > div.sticker > div > h5 {
     font-weight: bold;
 }
 
-section > div.sticker > div > div {
+div.sticker > div > div {
     width: 5rem;
     display: flex;
     justify-content: space-between;
     margin-right: 0.5rem;
 }
 
-section > div.sticker > div > div > i {
+div.sticker > div > div > i {
     color: #1C60AD;
     font-size: 1.4rem;
     cursor: pointer;
 }
 
-section > div.sticker > div > div > a > i {
+div.sticker > div > div > a > i {
     color: #1C60AD;
     font-size: 1.4rem;
     cursor: pointer;
 }
 
-section > div.stickerBody {
+div.sticker > div > div > label > i {
+    color: #1C60AD;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+div.stickerBody {
     display: flex;
     flex-flow: column;
 }
 
-section > div.stickerBody > h3 {
+div.stickerBody > h3 {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -173,7 +179,7 @@ section > div.stickerBody > h3 {
 
 }
 
-section > div.stickerBody > p {
+div.stickerBody > p {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -200,7 +206,7 @@ section > div.stickerBody > p {
     height: 8rem;
 }
 
-section > div.stickerBody > div.userProfile {
+div.stickerBody > div.userProfile {
     display: flex;
     width: 80%;
     align-items: center;
@@ -209,7 +215,7 @@ section > div.stickerBody > div.userProfile {
     margin-left: auto;
 }
 
-section > div.stickerBody > div.userProfile > p {
+div.stickerBody > div.userProfile > p {
     margin-top: 1rem;
     margin-right: .7rem;
     font-style: italic;
@@ -217,7 +223,7 @@ section > div.stickerBody > div.userProfile > p {
     font-size: .9rem;
 }
 
-section > div.stickerBody > div.userProfile > a > img {
+div.stickerBody > div.userProfile > a > img {
     width: 2rem;
     height: 2rem;
     border-radius: 30rem;
@@ -305,11 +311,11 @@ div.contenedor {
     flex-flow: column;
 }
 
-div.contenedor > div.goBack{
+div.contenedor > div.goBack {
     flex-flow: row;
 }
 
-div.contenedor > div.goBack > a{
+div.contenedor > div.goBack > a {
     text-decoration: none;
     margin-right: 1rem;
 }
@@ -407,6 +413,137 @@ div.user > div.textOpinion > p:nth-child(3) {
     font-weight: bold;
 }
 
+/*===========================================================*/
+/*===========================================================*/
+/*=======================EDITAR STICKER======================*/
+/*===========================================================*/
+/*===========================================================*/
+section > form > div:nth-child(1) {
+    background: white;
+    height: 3rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section > form > div:nth-child(1) > a {
+    color: black;
+    margin-left: 5%;
+}
+
+section > form > div:nth-child(1) > a > i {
+    font-size: 2rem;
+}
+
+section > form > div:nth-child(1) > span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+section > form > div:nth-child(1) > button {
+    border: none;
+    background: none;
+    margin-right: 5%;
+}
+
+section > form > div:nth-child(1) > button > i {
+    font-size: 1.2rem;
+}
+
+div.stickerEdit {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.5rem;
+    height: 15rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
+    border-radius: 6px;
+}
+
+div.stickerEdit > div {
+    position: absolute;
+    width: 100%;
+    height: 2.7rem;
+    left: 0px;
+    top: 12.3rem;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 6px 6px;
+    align-items: center;
+}
+
+div.stickerEdit > div > h5 {
+    margin-left: 1rem;
+    margin-top: 7px;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+div.stickerEdit  > div > div {
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0.5rem;
+}
+
+div.stickerEdit > div > div > label > i {
+    color: #1C60AD;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+form > div.stickerBody > input {
+    width: 80%;
+    margin-right: auto;
+    margin-left:9.6%;
+    font-weight: bold;
+    border: none;
+    background: none;
+    margin-bottom: .6rem;
+    font-size: 1.53rem;
+    font-family: Roboto;
+}
+
+form > div.stickerBody > textarea {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    color: #646464;
+    font-weight: 500;
+    line-height: 19px;
+    font-size: 15px;
+    border: none;
+    background: none;
+    height: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+form > div.stickerBody > label{
+    margin-top: 1.5rem;
+    background: #38c172;
+    width: 10.05rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form > div.stickerBody > button{
+    margin-top: 1.5rem;
+    background: #1a90b0;
+    color: white;
+    width: 10.05rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form > div.stickerBody > button:hover{
+    background: #1c7a96;
+    color: white;
+}
+
 /*==================================================*/
 /*==================================================*/
 /*=====================PERFILES=====================*/
@@ -436,16 +573,16 @@ section > div > div.firstPart > div:nth-child(1) > span {
     font-weight: bold;
 }
 
-section > div > div.firstPart > div:nth-child(1) > a{
+section > div > div.firstPart > div:nth-child(1) > a {
     margin-left: 1.5rem;
 }
 
-section > div > div.firstPart > div:nth-child(1) > a > i{
+section > div > div.firstPart > div:nth-child(1) > a > i {
     font-size: 1.3rem;
     color: black;
 }
 
-section > div > div.firstPart > div:nth-child(1) > i{
+section > div > div.firstPart > div:nth-child(1) > i {
     font-size: 1.3rem;
     margin-right: 1.5rem;
     cursor: pointer;
@@ -496,32 +633,40 @@ section > div > div.firstPart > div > div:nth-child(3) > a:nth-child(1) > button
     border-radius: .2rem;
     border: none;
     background: #1C60AD;
-    color:white;
+    color: white;
     width: 8.4rem;
 }
 
-.followButton{
+.followButton {
     color: white;
     background: #1C60AD !important;
     width: 8.4rem;
 }
 
-.followButton:hover{
-    background: #144f93;
+.followButton:hover {
+    background: #144f93 !important;
 }
 
-.unfollowButton{
-    background: none;
-    color: black;
-    width: 8.4rem;
+.editarPerfilButton:hover{
+    background: #144f93 !important;
+}
+
+.unfollowButton {
+    background: none !important;
+    color: black !important;
+    width: 8.4rem !important;
     border: 1px solid #a1a1a1 !important;
 }
 
-.unfollowButton:hover{
-    background: #e5e5e5;
+.unfollowButton:hover {
+    background: #e5e5e5 !important;
 }
 
-.instagramButton:hover{
+.elementosGuardados:hover {
+    background: #e5e5e5 !important;
+}
+
+.instagramButton:hover {
     background: #e5e5e5 !important;
 }
 
@@ -560,7 +705,7 @@ section > div > div.secondPart > div {
     margin-top: -1rem;
 }
 
-section > div > div.secondPart > div > a{
+section > div > div.secondPart > div > a {
     width: 48%;
 }
 
@@ -654,7 +799,7 @@ section > div.editarPerfil > form > div:nth-child(1) > span {
 
 section > div.editarPerfil > form > div:nth-child(1) > button {
     margin-right: 5%;
-    border:none;
+    border: none;
     background: none;
     font-size: 1.1rem;
 }
@@ -746,6 +891,10 @@ div.anadirSticker > form > div:nth-child(1) > button {
     border: none;
     background: none;
     margin-right: 5%;
+}
+
+div.anadirSticker > form > div:nth-child(1) > button > i {
+    font-size: 1.2rem;
 }
 
 div.anadirSticker > form > div:nth-child(2) > div {
@@ -982,6 +1131,36 @@ section > div.busqueda {
     margin-left: auto;
 }
 
+section > div.busqueda > div:nth-child(1) > div:nth-child(1) {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+section > div.busqueda > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+}
+
+section > div.busqueda > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)  > div > input{
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid black;
+    margin-right: 1.5rem;
+}
+
+section > div.busqueda > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)  > div > button{
+
+    background: white;
+    border:2px solid black;
+    height: 2rem;
+    width: 3rem;
+    position: absolute;
+    left: 52%;
+}
+
 /*De aqui al final es el sticker*/
 div.postsBusqueda > a {
     height: 15rem;
@@ -1060,12 +1239,16 @@ footer > .menu > ul {
     text-align: center;
     padding: 0;
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer > .menu > ul > li {
     display: inline;
     padding-left: 6.5%;
     padding-right: 6.5%;
+    margin-top: .3rem;
 }
 
 footer > .menu > ul > li > a > i {
@@ -1108,7 +1291,7 @@ footer > .menu > ul > li > a > i {
     color: white;
 }
 
-#categoriaSelect{
+#categoriaSelect {
     margin-bottom: 1.2rem;
 }
 
@@ -1116,4 +1299,8 @@ footer > .menu > ul > li > a > i {
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+}
+
+.footerSelected > a > i{
+
 }

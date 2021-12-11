@@ -16,6 +16,7 @@ class StoreStickerController extends Controller
     )
     {
         $this->postRepository = $postRepository;
+        $this->middleware('auth');
     }
 
     public function storeSticker(Request $request)

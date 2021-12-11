@@ -15,6 +15,7 @@ class SeguirUsuarioController extends Controller
     )
     {
         $this->contactRepository = $contactRepository;
+        $this->middleware('auth');
     }
 
     public function seguirUsuario($id){

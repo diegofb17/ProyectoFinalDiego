@@ -22,6 +22,7 @@ class PerfilController extends Controller
         $this->postRepository = $postRepository;
         $this->contactRepository = $contactRepository;
         $this->userRepository = $userRepository;
+        $this->middleware('auth');
     }
 
     public function perfiles($id)

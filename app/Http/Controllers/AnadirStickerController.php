@@ -15,6 +15,8 @@ class AnadirStickerController extends Controller
     )
     {
         $this->categorieRepository = $categorieRepository;
+        $this->middleware('auth');
+
     }
 
     public function anadirSticker()

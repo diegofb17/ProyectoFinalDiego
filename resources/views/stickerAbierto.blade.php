@@ -5,7 +5,11 @@
         <div>
             <h5>{{$data['post']['name']}}</h5>
             <div>
-                <i class="fas fa-share-alt"></i>
+                @if($data['post']['id'] == $idUser)
+                    <a href="{{route("editarSticker",$data['post']['id_post'])}}"><i class="fas fa-pencil-alt"></i></a>
+                @else
+                    <a style="visibility: hidden" href="#"><i class="fas fa-pencil-alt"></i></a>
+                @endif
                 <i class="fas fa-map-marker-alt"></i>
                 @if($data['elementoGuardado'] == false)
                     <a href="{{ route("addFavoriteElement",$data['post']['id_post']) }}"><i class="far fa-bookmark"></i></a>
@@ -47,12 +51,16 @@
                     <i class="far fa-star" id="star1"></i><i class="far fa-star" id="star2"></i><i class="far fa-star" id="star3"></i><i class="far fa-star" id="star4"></i><i class="far fa-star" id="star5"></i>
                 </div>
             </div>
-            <p id="errorOpiniones" style="color: red;font-weight: bold"></p>
+            <p id="errorOpiniones" style="color: red;font-weight: bold">
+                @if(isset($data['error']) && $data['error'])
+                    Solo puedes opinar una vez
+                @endif
+            </p>
             <textarea placeholder="Opinion del lugar" maxlength="300" rows="5" name="text_opinion" id="text_opinion"></textarea>
 
-            <form action="{{route('storeOpinion')}}" method="post">
+            <form action="{{route('storeOpinion')}}" method="get">
                 @csrf
-                <button type="submit" id="enviarOpinion">Enviar opinion</button>
+                <button class="btn" type="submit" id="enviarOpinion">Enviar opinion</button>
                 <input type="hidden" id="puntuationOpinion" name="puntuationOpinion">
                 <input type="hidden" id="textOpinion" name="textOpinion">
                 <input type="hidden" id="idPostOpinion" name="idPostOpinion" value="{{$data['post']['id_post']}}">
@@ -67,7 +75,7 @@
             if($('#puntuationOpinion').val() != '' && $('#text_opinion').val().length >= 45) {
                 $('#textOpinion').val($('#text_opinion').val())
             }else{
-                if($('#text_opinion').val().length < 35){
+                if($('#text_opinion').val().length < 45){
                     if($('#text_opinion').val().length == 0){
                         $('#errorOpiniones').text('Campo de opinion vacío')
                     }else{

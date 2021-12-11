@@ -15,6 +15,7 @@ class OpinionController extends Controller
     )
     {
         $this->opinionRepository = $opinionRepository;
+        $this->middleware('auth');
     }
 
     public function opiniones($id)

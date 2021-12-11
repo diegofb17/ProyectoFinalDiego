@@ -29,4 +29,12 @@ class OpinionRepository
             'text' => $data['text']
         ]);
     }
+
+    public function userAlreadyOpined($idUser,$idPost)
+    {
+
+        return Opinion::where('id_user',$idUser)
+            ->where('id_post',$idPost)
+            ->count();
+    }
 }

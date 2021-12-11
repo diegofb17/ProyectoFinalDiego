@@ -15,6 +15,7 @@ class DejarSeguirUsuarioController extends Controller
     )
     {
         $this->contactRepository = $contactRepository;
+        $this->middleware('auth');
     }
 
     public function dejarSeguirUsuario($id)

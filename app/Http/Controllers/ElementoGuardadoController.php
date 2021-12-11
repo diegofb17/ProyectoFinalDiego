@@ -19,6 +19,7 @@ class ElementoGuardadoController extends Controller
     {
         $this->postFavRepository = $postFavRepository;
         $this->postRepository = $postRepository;
+        $this->middleware('auth');
     }
 
     public function elementosGuardados()

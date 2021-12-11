@@ -21,7 +21,6 @@
                         <span id="clickToCopy" style="cursor: pointer">Compartir perfil</span>
                     </a>
                 </div>
-
                 {{--input hidden con el enlace a copiar--}}
                 <input id="compartirPerfil" type="hidden" value="Copiando">
             </div>
@@ -52,7 +51,7 @@
     <script>
         $(document).ready(function () {
             $('#clickToCopy').click(function () {
-                document.getElementById('compartirPerfil').value = 'Compartiendo';
+                document.getElementById('compartirPerfil').value = 'http://proyectofinaldiego.test/perfiles/'+{{auth()->user()->id}};
                 // Crea un campo de texto "oculto"
                 var aux = document.createElement("input");
 

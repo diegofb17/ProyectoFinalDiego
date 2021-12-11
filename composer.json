@@ -9,12 +9,13 @@
         "components/font-awesome": "^5.15",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.65",
+        "laravel/framework": "^5.6",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "nesbot/carbon": "^2.55",
-        "simplesoftwareio/simple-qrcode": "~2"
+        "simplesoftwareio/simple-qrcode": "~2",
+        "farhanwazir/laravelgooglemaps": "^2.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
