@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PostImage;
+use App\Repositories\CategorieRepository;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -10,24 +11,28 @@ use Illuminate\Support\Facades\Validator;
 class StoreStickerController extends Controller
 {
     private $postRepository;
+    private $categorieRepository;
 
     public function __construct(
-        PostRepository $postRepository
+        PostRepository $postRepository,
+        CategorieRepository $categorieRepository
     )
     {
         $this->postRepository = $postRepository;
+        $this->categorieRepository = $categorieRepository;
         $this->middleware('auth');
     }
 
     public function storeSticker(Request $request)
     {
         $arrayImagenes = [];
-
+        $data['categorias'] = $this->categorieRepository->listAllForSelect();
         $validation = $this->validateRequest($request->all());
 
         if (!$validation['isValid']) {
             return view('/anadirSticker', [
-                'errors' => $validation['errors']->messages()
+                'errors' => $validation['errors']->messages(),
+                'data' => $data
             ]);
         }
 

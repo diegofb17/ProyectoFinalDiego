@@ -21,18 +21,24 @@ header > img {
     margin-right: auto;
 }
 
-/*==================================================*/
-/*==================================================*/
-/*======================STICKER PAGINA PRINCIPAL======================*/
-/*==================================================*/
-/*==================================================*/
 section {
     display: flex;
     flex-flow: column;
     margin-top: 4rem;
 }
 
-section > a {
+/*==================================================*/
+/*==================================================*/
+/*======================STICKER PAGINA PRINCIPAL======================*/
+/*==================================================*/
+/*==================================================*/
+
+section > div.paginaPrincipal {
+    display: flex;
+    flex-flow: column;
+}
+
+section > div.paginaPrincipal > a {
     height: 15rem;
     margin-top: 1.5rem;
     width: 80%;
@@ -40,11 +46,11 @@ section > a {
     margin-left: auto;
 }
 
-section > a:last-child {
+section > div.paginaPrincipal > a:last-child {
     margin-bottom: 6rem;
 }
 
-section > a > div.sticker {
+section > div.paginaPrincipal > a > div.sticker {
 
     height: 15rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
@@ -53,7 +59,7 @@ section > a > div.sticker {
 }
 
 /*Titulo*/
-section > a > div.sticker > div:nth-child(1) {
+section > div.paginaPrincipal > a > div.sticker > div:nth-child(1) {
     background: rgba(25, 85, 152, 0.6);
     height: 2.5rem;
     margin-top: 1rem;
@@ -61,13 +67,13 @@ section > a > div.sticker > div:nth-child(1) {
     width: 12rem;
 }
 
-section > a > div.sticker > div > p {
+section > div.paginaPrincipal > a > div.sticker > div > p {
     margin-top: 0.5rem;
     margin-left: 1rem;
     color: white;
 }
 
-section > a > div.sticker > div:nth-child(2) {
+section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) {
     position: absolute;
     width: 100%;
     height: 2.7rem;
@@ -82,21 +88,21 @@ section > a > div.sticker > div:nth-child(2) {
     cursor: default;
 }
 
-section > a > div.sticker > div:nth-child(2) > h5 {
+section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) > h5 {
     margin-left: 1rem;
     margin-top: 7px;
     font-size: 1rem;
     color: black;
 }
 
-section > a > div.sticker > div:nth-child(2) > div {
+section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) > div {
     width: 3.5rem;
     display: flex;
     justify-content: space-between;
     margin-right: 1rem;
 }
 
-section > a > div.sticker > div:nth-child(2) > div > i {
+section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) > div > i {
     color: #1C60AD;
     font-size: 1.4rem;
     cursor: pointer;
@@ -108,7 +114,7 @@ section > a > div.sticker > div:nth-child(2) > div > i {
 /*===========================================================*/
 /*===========================================================*/
 
-section > div.sticker {
+section > div > div.sticker {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -118,7 +124,7 @@ section > div.sticker {
     border-radius: 6px;
 }
 
-section >div.sticker > div {
+section > div > div.sticker > div {
     position: absolute;
     width: 100%;
     height: 2.7rem;
@@ -132,7 +138,7 @@ section >div.sticker > div {
     align-items: center;
 }
 
-section >div.sticker > div > h5 {
+section > div > div.sticker > div > h5 {
     margin-left: 1rem;
     margin-top: 7px;
     font-size: 1rem;
@@ -170,7 +176,7 @@ div.stickerBody {
     flex-flow: column;
 }
 
-div.stickerBody > h3 {
+div.stickerText > h3 {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -179,7 +185,7 @@ div.stickerBody > h3 {
 
 }
 
-div.stickerBody > p {
+div.stickerText > p {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -363,17 +369,6 @@ div.contenedor > div.nivelOpinion > div {
     margin: auto;
 }
 
-div.contenedor > div.nivelOpinion > div > p:nth-child(1) {
-    color: #7D7D7D;
-    font-size: 1.1rem;
-}
-
-div.contenedor > div.nivelOpinion > div > p:nth-child(2) {
-    font-weight: bold;
-    font-size: 1.1rem;
-
-}
-
 div.user > div.userInfo {
     display: flex;
     justify-content: space-between;
@@ -483,7 +478,7 @@ div.stickerEdit > div > h5 {
     font-weight: bold;
 }
 
-div.stickerEdit  > div > div {
+div.stickerEdit > div > div {
     width: 5rem;
     display: flex;
     justify-content: space-between;
@@ -499,7 +494,7 @@ div.stickerEdit > div > div > label > i {
 form > div.stickerBody > input {
     width: 80%;
     margin-right: auto;
-    margin-left:9.6%;
+    margin-left: 9.6%;
     font-weight: bold;
     border: none;
     background: none;
@@ -522,7 +517,7 @@ form > div.stickerBody > textarea {
     margin-bottom: 1.5rem;
 }
 
-form > div.stickerBody > label{
+form > div.stickerBody > label {
     margin-top: 1.5rem;
     background: #38c172;
     width: 10.05rem;
@@ -530,7 +525,7 @@ form > div.stickerBody > label{
     margin-left: auto;
 }
 
-form > div.stickerBody > button{
+form > div.stickerBody > button {
     margin-top: 1.5rem;
     background: #1a90b0;
     color: white;
@@ -539,7 +534,7 @@ form > div.stickerBody > button{
     margin-left: auto;
 }
 
-form > div.stickerBody > button:hover{
+form > div.stickerBody > button:hover {
     background: #1c7a96;
     color: white;
 }
@@ -647,7 +642,7 @@ section > div > div.firstPart > div > div:nth-child(3) > a:nth-child(1) > button
     background: #144f93 !important;
 }
 
-.editarPerfilButton:hover{
+.editarPerfilButton:hover {
     background: #144f93 !important;
 }
 
@@ -662,7 +657,7 @@ section > div > div.firstPart > div > div:nth-child(3) > a:nth-child(1) > button
     background: #e5e5e5 !important;
 }
 
-.elementosGuardados:hover {
+.elementosGuardadosButton:hover {
     background: #e5e5e5 !important;
 }
 
@@ -702,17 +697,16 @@ section > div > div.secondPart > div {
     margin-right: auto;
     margin-left: auto;
     justify-content: space-between;
-    margin-top: -1rem;
 }
 
 section > div > div.secondPart > div > a {
     width: 48%;
+    margin-bottom: 2rem;
 }
 
 section > div > div.secondPart > div > a > div.sticker {
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 1.5rem;
     height: 8rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
     border-radius: 6px;
@@ -744,7 +738,12 @@ section > div > div.secondPart > div > a > div.sticker > div > h5 {
 /*===============================================================*/
 /*===============================================================*/
 
-section > div.elementosGuardados {
+section > div.pagElementosGuardados {
+    display: flex;
+    flex-flow: column;
+}
+
+section > div.pagElementosGuardados > div.elementosGuardados {
     height: 3rem;
     margin-top: -.2rem;
     display: flex;
@@ -754,16 +753,86 @@ section > div.elementosGuardados {
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1);
 }
 
-section > div.elementosGuardados > a > i {
+section > div.pagElementosGuardados > div.elementosGuardados > a > i {
     color: #1C60AD;
     font-size: 1.2rem;
     cursor: pointer;
 }
 
-section > div.elementosGuardados > span {
+section > div.pagElementosGuardados > div.elementosGuardados > span {
     color: #1C60AD;
     font-size: 1.3rem;
     margin-right: 10rem;
+}
+
+section > div.pagElementosGuardados > a {
+    height: 15rem;
+    margin-top: 1.5rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section > div.pagElementosGuardados > a:last-child {
+    margin-bottom: 6rem;
+}
+
+section > div.pagElementosGuardados > a > div.sticker {
+
+    height: 15rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*Titulo*/
+section > div.pagElementosGuardados > a > div.sticker > div:nth-child(1) {
+    background: rgba(25, 85, 152, 0.6);
+    height: 2.5rem;
+    margin-top: 1rem;
+    position: absolute;
+    width: 12rem;
+}
+
+section > div.pagElementosGuardados > a > div.sticker > div > p {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+section > div.pagElementosGuardados > a > div.sticker > div:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 2.7rem;
+    left: 0px;
+    top: 12.3rem;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 6px 6px;
+    align-items: center;
+    cursor: default;
+}
+
+section > div.pagElementosGuardados > a > div.sticker > div:nth-child(2) > h5 {
+    margin-left: 1rem;
+    margin-top: 7px;
+    font-size: 1rem;
+    color: black;
+}
+
+section > div.pagElementosGuardados > a > div.sticker > div:nth-child(2) > div {
+    width: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+section > div.pagElementosGuardados > a > div.sticker > div:nth-child(2) > div > i {
+    color: #1C60AD;
+    font-size: 1.4rem;
+    cursor: pointer;
 }
 
 /*=========================================================*/
@@ -897,31 +966,32 @@ div.anadirSticker > form > div:nth-child(1) > button > i {
     font-size: 1.2rem;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div {
+
+div.anadirSticker > form > div:nth-child(2) > div > div {
     display: flex;
     flex-flow: row;
     width: 90%;
     margin: 2rem auto;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(1) {
+div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(1) {
     width: 2rem;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(1) > i {
+div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(1) > i {
     color: #838383;
     font-size: 1.3rem;
     margin-left: 2rem;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) {
+div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) {
     display: flex;
     flex-flow: column;
     margin-left: 10%;
     width: 70%;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > span {
+div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > span {
     color: #838383;
     font-size: .8rem;
     font-weight: 600;
@@ -929,18 +999,18 @@ div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > span {
     margin-bottom: .2rem;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > input {
+div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > input {
     background: none;
     border: none;
     border-bottom: 2px solid #838383;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > input:focus {
+div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > input:focus {
     outline: none;
     border-bottom: 2px solid blue;
 }
 
-div.anadirSticker > form > div:nth-child(2) > div > div:nth-child(2) > textarea {
+div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > textarea {
     width: 100%;
     height: 6rem;
 }
@@ -1139,22 +1209,22 @@ section > div.busqueda > div:nth-child(1) > div:nth-child(1) {
     margin-bottom: 1.5rem;
 }
 
-section > div.busqueda > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+section > div.busqueda > div:nth-child(1) > div:nth-child(2) > form > div:nth-child(1) {
     display: flex;
     justify-content: center;
 }
 
-section > div.busqueda > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)  > div > input{
+section > div.busqueda > div:nth-child(1) > div:nth-child(2) > form > div:nth-child(1) > div > input {
     height: 2rem;
     width: 15rem;
     border: 2px solid black;
     margin-right: 1.5rem;
 }
 
-section > div.busqueda > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)  > div > button{
+section > div.busqueda > div:nth-child(1) > div:nth-child(2) > form > div:nth-child(1) > div > button {
 
     background: white;
-    border:2px solid black;
+    border: 2px solid black;
     height: 2rem;
     width: 3rem;
     position: absolute;
@@ -1301,6 +1371,372 @@ footer > .menu > ul > li > a > i {
     margin-bottom: 10px; /* Added */
 }
 
-.footerSelected > a > i{
+/*===============================================*/
 
+/*===============================================*/
+
+/*========MEDIA QUERY PARA VERSION TABLET========*/
+
+/*===============================================*/
+
+/*===============================================*/
+
+@media (min-width: 750px) {
+
+    /*==================================================*/
+    /*==================================================*/
+    /*======================STICKER PAGINA PRINCIPAL====*/
+    /*==================================================*/
+    /*==================================================*/
+    section > div.paginaPrincipal {
+        display: flex;
+        flex-flow: row wrap;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: space-between;
+    }
+
+    section > div.paginaPrincipal > a {
+        width: 46%;
+    }
+
+    section > div.paginaPrincipal > a > div.sticker {
+        flex-wrap: wrap;
+        width: 100%;
+        height: 15rem;
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    section > div.paginaPrincipal > a:last-child {
+        margin-left: 2%;
+    }
+
+    /*Titulo*/
+    section > div.paginaPrincipal > a > div.sticker > div:nth-child(1) {
+        background: rgba(25, 85, 152, 0.6);
+        height: 2.5rem;
+        margin-top: 1rem;
+        position: absolute;
+        width: 12rem;
+    }
+
+    section > div.paginaPrincipal > a > div.sticker > div > p {
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        color: white;
+    }
+
+    section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) {
+        position: absolute;
+        width: 100%;
+        height: 2.7rem;
+        left: 0px;
+        top: 12.3rem;
+        justify-content: space-between;
+        display: flex;
+        flex-flow: row;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 0px 0px 6px 6px;
+        align-items: center;
+        cursor: default;
+    }
+
+    section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) > h5 {
+        margin-left: 1rem;
+        margin-top: 7px;
+        font-size: 1rem;
+        color: black;
+    }
+
+    section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) > div {
+        width: 3.5rem;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 1rem;
+    }
+
+    section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) > div > i {
+        color: #1C60AD;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    /*==========================================================*/
+    /*==========================================================*/
+    /*======================Añadir Sticker======================*/
+    /*==========================================================*/
+    /*==========================================================*/
+    div.anadirSticker > form > div:nth-child(2) {
+        display: flex;
+        flex-flow: row;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+
+    div.anadirSticker > form > div:nth-child(2) > div {
+        width: 50%;
+    }
+
+    div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(1) > i {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > span {
+        font-size: 1rem;
+    }
+
+    div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > input {
+        background: none;
+        border: none;
+        border-bottom: 2px solid #838383;
+        height: 2rem;
+        font-size: 1.2rem;
+    }
+
+    div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > input:focus {
+        outline: none;
+        border-bottom: 2px solid blue;
+    }
+
+    div.anadirSticker > form > div:nth-child(2) > div > div > div:nth-child(2) > textarea {
+        width: 100%;
+        height: 6rem;
+    }
+
+    /*===========================================================*/
+    /*===========================================================*/
+    /*======================STICKER ABIERTO======================*/
+    /*===========================================================*/
+    /*===========================================================*/
+    section > div.sticker {
+        width: 75%;
+    }
+
+    div.stickerText{
+        width: 78%;
+    }
+
+    div.stickerText > h3 {
+        width: 75%;
+    }
+
+    div.stickerText > p {
+        width: 75%;
+    }
+
+    .imagenesSticker {
+        width: 80%;
+    }
+
+    .imagenesSticker > img {
+        height: 11rem;
+    }
+
+    section > div.stickerBody > div.opinions {
+        width: 70%;
+    }
+
+    section > div.stickerBody > div.opinions > textarea {
+        height: 10rem;
+    }
+
+    /*==================================================*/
+    /*==================================================*/
+    /*=====================PERFILES=====================*/
+    /*==================================================*/
+    /*==================================================*/
+    section > div > div.firstPart > div:nth-child(1) {
+        height: 2.7rem;
+    }
+
+    section > div > div.firstPart > div:nth-child(1) > a {
+        margin-left: 1.5rem;
+    }
+
+    section > div > div.firstPart > div:nth-child(1) > a > i {
+        font-size: 1.6rem;
+    }
+
+    section > div > div.firstPart > div:nth-child(1) > i {
+        font-size: 1.5rem;
+    }
+
+    section > div > div.secondPart {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section > div > div.secondPart > div > a {
+        width: 30%;
+        height: 10rem;
+    }
+
+    section > div > div.secondPart > div > a > div.sticker {
+        height: 10rem;
+    }
+
+    section > div > div.secondPart > div > a > div.sticker > div {
+        top: 7.8rem;
+    }
+}
+
+/*===============================================*/
+/*===============================================*/
+/*========MEDIA QUERY PARA VERSION PC========*/
+/*===============================================*/
+/*===============================================*/
+@media (min-width: 1024px) {
+
+    /*==================================================*/
+    /*==================================================*/
+    /*======================STICKER PAGINA PRINCIPAL====*/
+    /*==================================================*/
+    /*==================================================*/
+    section > div.paginaPrincipal > a {
+        width: 23%;
+    }
+
+    section > div.paginaPrincipal > a:last-child {
+        margin-left: 1%;
+    }
+
+    section > div.paginaPrincipal > a > div.sticker > div:nth-child(2) > div > i {
+        color: #1C60AD;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    /*===========================================================*/
+    /*===========================================================*/
+    /*======================STICKER ABIERTO======================*/
+    /*===========================================================*/
+    /*===========================================================*/
+
+    section > div.firstPartSticker{
+        display: flex;
+        flex-flow: row;
+        margin-bottom: 2rem;
+    }
+
+    section > div > div.sticker {
+        width: 37%;
+        margin-left: 13%;
+        height: 22rem;
+    }
+
+    section > div > div.sticker > div {
+        top: 19.3rem;
+    }
+
+    section > div > div.stickerText{
+        width: 60%;
+    }
+
+    section > div > div.stickerText > p{
+        width: 63%;
+        margin-left: 12.8%;
+        font-size: 1.1rem;
+        line-height : 25px;
+    }
+
+    div.stickerBody{
+        width: 92.5%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .imagenesSticker > img {
+        width: 45%;
+        height: 17rem;
+    }
+
+    div.stickerBody > div.userProfile > p {
+        font-size: 1.1rem;
+    }
+
+    div.stickerBody > div.userProfile > a > img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 30rem;
+    }
+
+    section > div.stickerBody > div.opinions > div:nth-child(1) > i {
+        margin-right: .7rem;
+        font-size: 1.3rem;
+    }
+
+    section > div.stickerBody > div.opinions > div:nth-child(1) > span {
+        font-size: 1.3rem;
+    }
+
+    section > div.stickerBody > div.opinions > div:nth-child(1) > span > span {
+        text-decoration: underline;
+    }
+
+    section > div.stickerBody > div.opinions > div:nth-child(2) > span {
+        font-style: italic;
+        font-size: 1.3rem;
+    }
+
+    .stars > i {
+        font-size: 1.4rem;
+    }
+
+    /*==================================================*/
+    /*==================================================*/
+    /*==================OPINIONES=======================*/
+    /*==================================================*/
+    /*==================================================*/
+
+    section > div.contenedor{
+        width: 80%;
+    }
+
+    section > div.contenedor > div.goBack{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section > div.contenedor > div.goBack > span{
+        font-size: 1.4rem;
+    }
+
+    section > div.contenedor > div.opiniones{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section > div.contenedor > div.opiniones >p {
+        font-size: 1.1rem;
+    }
+
+    section > div.contenedor > hr{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.opinions2{
+        display: flex;
+        flex-flow: row wrap;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+
+    div.opinions2 > div.user{
+        width: 40%;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
 }

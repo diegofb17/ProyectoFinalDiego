@@ -36,7 +36,11 @@
             <li><a href="{{route('paginaPrincipal')}}"><i class="fas fa-home"></i></a></li>
             <li><a href="{{route('busqueda')}}"><i class="fas fa-search"></i></a></li>
             <li><a href="{{route('anadirSticker')}}"><i class="fas fa-plus-circle"></i></a></li>
+            @if(auth()->user() != null)
             <li><a href="{{route('perfiles',auth()->user()->id)}}"><i class="fas fa-user"></i></a></li>
+            @else
+                <li><a href="{{route('perfiles',1)}}"><i class="fas fa-user"></i></a></li>
+            @endif
             <li><a href="{{route('configuracion')}}"><i class="fas fa-tools"></i></a></li>
         </ul>
     </div>

@@ -7,18 +7,21 @@
                 <span>¿Que sitio quieres visitar?</span>
             </div>
             <div>
+                <form action="mostrarBusqueda" method="post">
                 <div>
                     <div>
-                        <input type="text" id="buscarPost">
+                        <input type="text" id="buscarPost" name="aBuscar">
                         <button><i class="fas fa-search"></i></button>
                     </div>
                     <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
-                        @foreach($data['categories'] as $categorie)
+                        @foreach($data['categories'] as $key => $categorie)
 
-                            <option value="WY">{{$categorie}}</option>
+                            <option value="{{$key}}">{{$categorie}}</option>
                         @endforeach
                     </select>
                 </div>
+                    @csrf
+                </form>
                 {{--<div>
                     <a href="#">
                         <button>Reserva tu visita</button>

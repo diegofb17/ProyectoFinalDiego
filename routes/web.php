@@ -41,5 +41,6 @@ Route::get('/configuracion', 'App\Http\Controllers\ConfiguracionController@confi
 Route::get('/administrar_cuenta', 'App\Http\Controllers\AdministrarCuentaController@administrarCuenta')->name('administrarCuenta');
 
 Route::get('/busqueda', 'App\Http\Controllers\BusquedaController@busqueda')->name('busqueda');
+Route::post('/mostrarBusqueda', 'App\Http\Controllers\BusquedaController@mostrarBusqueda')->name('mostrarBusqueda');
 
 

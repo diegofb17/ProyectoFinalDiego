@@ -21,13 +21,17 @@ class PaginaPrincipalController extends Controller
     {
         $this->postRepository = $postRepository;
         $this->contactRepository = $contactRepository;
-        $this->middleware('auth');
     }
 
     public function index()
     {
         $usuariosSeguidos = [];
-        $idUser = auth()->user()->id;
+        if(auth()->user() != null){
+            $idUser = auth()->user()->id;
+        }else{
+            $idUser=0;
+        }
+
         $usersFollowed=$this->contactRepository->listFollowed($idUser);
 
         foreach ($usersFollowed as $userFollowed){

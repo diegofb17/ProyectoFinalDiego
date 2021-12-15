@@ -20,6 +20,15 @@ class BusquedaController extends Controller
     public function busqueda()
     {
         $data['categories'] = $this->categorieRepository->listAllForSelect();
+
+        return view('busqueda',[
+            'data' => $data
+        ]);
+    }
+
+    public function mostrarBusqueda(Request $request){
+        $data['categories'] = $this->categorieRepository->listAllForSelect();
+dd($request->all());
         return view('busqueda',[
             'data' => $data
         ]);

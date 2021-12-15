@@ -1,27 +1,31 @@
 @extends('layout')
 
 @section('content')
-    <div class="sticker" style="background-image: url('{{asset('imagesStored/'.$data['post']['picture'])}}');background-size: cover;">
-        <div>
-            <h5>{{$data['post']['name']}}</h5>
+    <div class="firstPartSticker">
+        <div class="sticker" style="background-image: url('{{asset('imagesStored/'.$data['post']['picture'])}}');background-size: cover;">
             <div>
-                @if($data['post']['id'] == $idUser)
-                    <a href="{{route("editarSticker",$data['post']['id_post'])}}"><i class="fas fa-pencil-alt"></i></a>
-                @else
-                    <a style="visibility: hidden" href="#"><i class="fas fa-pencil-alt"></i></a>
-                @endif
-                <i class="fas fa-map-marker-alt"></i>
-                @if($data['elementoGuardado'] == false)
-                    <a href="{{ route("addFavoriteElement",$data['post']['id_post']) }}"><i class="far fa-bookmark"></i></a>
-                @else
-                    <a href="{{ route("deleteFavoriteElement",$data['post']['id_post']) }}"><i class="fas fa-bookmark"></i></a>
-                @endif
+                <h5>{{$data['post']['name']}}</h5>
+                <div>
+                    @if($data['post']['id'] == $idUser)
+                        <a href="{{route("editarSticker",$data['post']['id_post'])}}"><i class="fas fa-pencil-alt"></i></a>
+                    @else
+                        <a style="visibility: hidden" href="#"><i class="fas fa-pencil-alt"></i></a>
+                    @endif
+                    <i class="fas fa-map-marker-alt"></i>
+                    @if($data['elementoGuardado'] == false)
+                        <a href="{{ route("addFavoriteElement",$data['post']['id_post']) }}"><i class="far fa-bookmark"></i></a>
+                    @else
+                        <a href="{{ route("deleteFavoriteElement",$data['post']['id_post']) }}"><i class="fas fa-bookmark"></i></a>
+                    @endif
+                </div>
             </div>
+        </div>
+        <div class="stickerText">
+            <h3>{{$data['post']['title']}}</h3>
+            <p>{{$data['post']['text']}}</p>
         </div>
     </div>
     <div class="stickerBody">
-        <h3>{{$data['post']['title']}}</h3>
-        <p>{{$data['post']['text']}}</p>
         <div class="imagenesSticker">
             @foreach($data['images'] as $image)
                 <img src="{{ asset('imagesStored/'.$image) }}">
@@ -43,7 +47,7 @@
             <div>
                 <i class="fas fa-star"></i>
                 {{--En este span va la media de las valoraciones--}}
-                <span>{{number_format($data['mediaPost'], 1)}}/5 - <a href="{{route('opiniones',$id)}}"><span class="underline">{{$data['numOpiniones']}} Opiniones</span></a></span>
+                <span>{{is_float($data['mediaPost']) ? number_format($data['mediaPost'],1) : $data['mediaPost']}}/5 - <a href="{{route('opiniones',$id)}}"><span class="underline">{{$data['numOpiniones']}} Opiniones</span></a></span>
             </div>
             <div>
                 <span>Valora este sitio</span>

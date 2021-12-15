@@ -11,7 +11,7 @@
         </div>
         <div class="opiniones">
             <i class="fas fa-star"></i>
-            <p>{{number_format($data['mediaPost'],1)}}/5 - {{$data['numOpiniones']}} opiniones</p>
+            <p>{{is_float($data['mediaPost']) ? number_format($data['mediaPost'],1) : $data['mediaPost']}}/5 - {{$data['numOpiniones']}} opiniones</p>
         </div>
 
         <hr/>

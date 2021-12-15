@@ -61,6 +61,7 @@ class StickerAbiertoController extends Controller
         $data['elementoGuardado'] = false;
         $pictures = PostImage::where('id_post', $idPost)->get();
 
+        $data['images']=[];
         foreach ($pictures as $picture) {
             $data['images'][] = $picture->image;
         }
