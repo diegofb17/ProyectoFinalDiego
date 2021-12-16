@@ -42,7 +42,7 @@ class StoreStickerController extends Controller
             foreach ($request->imagenes as $key => $imagen) {
                 $name = str_replace(' ', '-', $imagen->getClientOriginalName());
 
-                $nombreImagen = time() . '-' . $name;
+                $nombreImagen = $name;
 
                 if ($cnt == 1) {
                     $data = [
