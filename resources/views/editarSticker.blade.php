@@ -24,7 +24,7 @@
                     <a style="visibility: hidden" href="updateSticker">
                         <i class="fas fa-pencil-alt"></i>
                     </a>
-                    <a href="{{route('deletePost',$data['post']['id_post'])}}">
+                    <a style="cursor: pointer" id="borrarPost">
                         <i style="color: #1C60AD;font-size: 1.2rem;margin-right: .5rem" class="fas fa-trash"></i>
                     </a>
 
@@ -52,6 +52,25 @@
     <script>
         $(document).ready(function() {
             $('.categorias').select2();
+        });
+
+        $('#borrarPost').click(function () {
+
+            Swal.fire({
+                title: '¿Estas seguro que quieres borrar este post?',
+                text: "¡No podrás deshacer esto!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, ¡borralo!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        window.location.href = '{{route('deletePost',$data['post']['id_post'])}}'
+                    )
+                }
+            })
         });
     </script>
 @endsection
