@@ -36,17 +36,16 @@ class StoreStickerController extends Controller
             ]);
         }
 
-
+        $idUser = auth()->user()->id;
         $cnt = 1;
         if (count($request->imagenes)) {
             foreach ($request->imagenes as $key => $imagen) {
-                $name = str_replace(' ', '-', $imagen->getClientOriginalName());
 
-                $nombreImagen = $name;
+                $nombreImagen = $imagen->getClientOriginalName() . $idUser;
 
                 if ($cnt == 1) {
                     $data = [
-                        'id_user' => auth()->user()->id,
+                        'id_user' => $idUser,
                         'id_categorie' => $request->get('categoriaSticker'),
                         'title' => $request->get('nombreSticker'),
                         'text' => $request->get('descripcionSticker'),
