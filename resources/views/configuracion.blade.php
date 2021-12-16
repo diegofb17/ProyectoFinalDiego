@@ -51,7 +51,7 @@
     <script>
         $(document).ready(function () {
             $('#clickToCopy').click(function () {
-                document.getElementById('compartirPerfil').value = 'http://proyectofinaldiego.test/perfiles/'+{{auth()->user()->id}};
+                document.getElementById('compartirPerfil').value = 'http://rincono.herokuapp.com/perfiles/'+{{auth()->user()->id}};
                 // Crea un campo de texto "oculto"
                 var aux = document.createElement("input");
 

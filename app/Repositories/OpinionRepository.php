@@ -32,9 +32,13 @@ class OpinionRepository
 
     public function userAlreadyOpined($idUser,$idPost)
     {
-
         return Opinion::where('id_user',$idUser)
             ->where('id_post',$idPost)
             ->count();
+    }
+
+    public function deleteOpinionsByPostId($id)
+    {
+        return Opinion::where('id_post',$id)->delete();
     }
 }

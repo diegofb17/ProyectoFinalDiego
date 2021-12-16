@@ -21,19 +21,18 @@ class UpdateProfileController extends Controller
         }
 
         if (isset($dataRequest['imagenPerfil']) && $dataRequest['imagenPerfil'] != null) {
-            $name = str_replace(' ', '_', $dataRequest['imagenPerfil']->getClientOriginalName());
+            $name = $dataRequest['imagenPerfil']->getClientOriginalName() . auth()->user()->id;
 
-            $nombreImagen = time() . '-' . $name;
-
-            User::where('id', $data->id)->update([
+            User::where('id', $data->id)
+                ->update([
                 'name' => $dataRequest['newNameUser'],
                 'last_name' => $dataRequest['newLastNameUser'],
                 'user_aka' => $dataRequest['newUser'],
                 'instagram_user' => $dataRequest['newInstagramName'],
-                'profile_image' => $nombreImagen
+                'profile_image' => $name
             ]);
 
-            $dataRequest['imagenPerfil']->move(public_path('imagesStored'), $nombreImagen);
+            $dataRequest['imagenPerfil']->move(public_path('imagesStored'), $name);
         }else{
             User::where('id', $data->id)->update([
                 'name' => $dataRequest['newNameUser'],

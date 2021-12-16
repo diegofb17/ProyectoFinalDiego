@@ -4,7 +4,7 @@
     <div class="profile">
         <div class="firstPart">
             <div>
-                <a href="{{url()->previous()}}">
+                <a style="visibility: hidden" href="{{url()->previous()}}">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 <span>{{isset($data['userInfo']['name']) ? $data['userInfo']['name'] : 'Usuario'}}</span>

@@ -24,28 +24,27 @@
                     <a style="visibility: hidden" href="updateSticker">
                         <i class="fas fa-pencil-alt"></i>
                     </a>
-                    <label for="imagenPortadaSticker">
-                        <i title="Cambiar imagen de portada" class="fas fa-image"></i>
-                    </label>
+                    <a href="{{route('deletePost',$data['post']['id_post'])}}">
+                        <i style="color: #1C60AD;font-size: 1.2rem;margin-right: .5rem" class="fas fa-trash"></i>
+                    </a>
+
                 </div>
             </div>
         </div>
 
-        <input style="visibility: hidden" accept="image/*" id="imagenPortadaSticker" type="file" name="imagenes"class="imagenes input-file">
-        <input style="visibility: hidden" accept="image/*" id="imagenesEditarSticker" type="file" name="imagenes[]" class="imagenes input-file" multiple="multiple">
-
-        <div class="stickerBody" style="margin-bottom: 6rem">
+        <div class="stickerBody" style="margin-bottom: 6rem;margin-top: 3rem">
             <input type="text" id="nombreStickerEditar" name="nombreStickerEditar" value="{{$data['post']['title']}}">
             <textarea id="descripcionEditar" name="descripcionEditar">{{$data['post']['text']}}</textarea>
             <div class="imagenesSticker">
-                @foreach($data['images'] as $image)
-                    <img src="{{ asset('imagesStored/'.$image) }}">
-                @endforeach
+                @isset($data['images'])
+                    @foreach($data['images'] as $image)
+                        <img src="{{ asset('imagesStored/'.$image) }}">
+                    @endforeach
+                @endisset
             </div>
-
-            <button onclick="document.getElementById('imagenesEditarSticker').click()" type="button" class="btn">Cambiar imágenes</button>
         </div>
         @csrf
+        <input type="hidden" id="idPost" name="idPost" value="{{$data['post']['id_post']}}">
     </form>
 @endsection
 

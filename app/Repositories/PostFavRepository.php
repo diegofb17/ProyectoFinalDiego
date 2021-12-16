@@ -33,4 +33,9 @@ class PostFavRepository
         return FavoritePost::where('id_user', $id)
             ->get();
     }
+
+    public function deleteByPostId($id)
+    {
+        return FavoritePost::where('id_post',$id)->delete();
+    }
 }

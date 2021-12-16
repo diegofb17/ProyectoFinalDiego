@@ -28,6 +28,7 @@ Route::get('/store_opinion', 'App\Http\Controllers\StickerAbiertoController@stic
 Route::get('/opiniones/{id}', 'App\Http\Controllers\OpinionController@opiniones')->name('opiniones');
 Route::get('/anadir_elemento_favorito/{id}','App\Http\Controllers\AddFavoriteElementController@addFavoriteElement')->name('addFavoriteElement');
 Route::get('/borrar_elemento_favorito/{id}','App\Http\Controllers\DeleteFavoriteElementController@deleteFavoriteElement')->name('deleteFavoriteElement');
+Route::get('/borrar_post/{id}','App\Http\Controllers\DeletePostController@deletePost')->name('deletePost');
 
 //Perfiles
 Route::get('/perfiles/{id}', 'App\Http\Controllers\PerfilController@perfiles')->name('perfiles');

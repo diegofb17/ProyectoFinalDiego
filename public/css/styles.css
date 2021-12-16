@@ -1231,56 +1231,51 @@ section > div.busqueda > div:nth-child(1) > div:nth-child(2) > form > div:nth-ch
     left: 52%;
 }
 
-/*De aqui al final es el sticker*/
-div.postsBusqueda > a {
-    height: 15rem;
-    margin-top: 1.5rem;
-    width: 80%;
+div.usersSearched{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
 }
 
-div.postsBusqueda > a > div.sticker {
+div.usersSearched > div.usersSearch{
+    border:3px solid black;
+}
 
-    height: 15rem;
+div.usersSearched > div.usersSearch > img{
+    width: 5rem;
+}
+
+div.usersSearched  > a {
+    width: 48%;
+    margin-bottom: 2rem;
+}
+
+div.usersSearched  > a > div.sticker {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 8rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.39));
     border-radius: 6px;
     cursor: pointer;
 }
 
-/*Titulo*/
-div.postsBusqueda > a > div.sticker > div:nth-child(1) {
-    background: rgba(25, 85, 152, 0.6);
-    height: 2.5rem;
-    margin-top: 1rem;
-    position: absolute;
-    width: 12rem;
-}
-
-div.postsBusqueda > a > div.sticker > div > p {
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    color: white;
-}
-
-div.postsBusqueda > a > div.sticker > div:nth-child(2) {
+div.usersSearched  > a > div.sticker > div {
     position: absolute;
     width: 100%;
-    height: 2.7rem;
-    left: 0px;
-    top: 12.3rem;
-    justify-content: space-between;
+    height: 2.2rem;
+    top: 5.8rem;
     display: flex;
     flex-flow: row;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 0px 0px 6px 6px;
     align-items: center;
-    cursor: default;
 }
 
-div.postsBusqueda > a > div.sticker > div:nth-child(2) > h5 {
+div.usersSearched  > a > div.sticker > div > h5 {
     margin-left: 1rem;
-    margin-top: 7px;
+    margin-top: 9px;
     font-size: 1rem;
     color: black;
 }

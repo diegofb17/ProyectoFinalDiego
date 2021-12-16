@@ -43,4 +43,9 @@ class PostRepository
             'accepted' => 1
         ]);
     }
+
+    public function deleteById($id){
+
+        return Post::where('id_post', $id)->delete();
+    }
 }

@@ -11,4 +11,9 @@ class UserRepository
         return User::where('id', $id)
             ->get()->first();
     }
+
+    public function getByUser($userName)
+    {
+        return User::where('user_aka','LIKE','%' . $userName . '%')->get();
+    }
 }

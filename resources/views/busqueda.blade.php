@@ -8,52 +8,55 @@
             </div>
             <div>
                 <form action="mostrarBusqueda" method="post">
-                <div>
                     <div>
-                        <input type="text" id="buscarPost" name="aBuscar">
-                        <button><i class="fas fa-search"></i></button>
-                    </div>
-                    <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
-                        @foreach($data['categories'] as $key => $categorie)
+                        <div>
+                            <input type="text" id="buscarPost" name="aBuscar">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <select class="js-example-basic-multiple" name="seleccion" multiple="multiple">
+                            @foreach($data['categories'] as $key => $categorie)
 
-                            <option value="{{$key}}">{{$categorie}}</option>
-                        @endforeach
-                    </select>
-                </div>
+                                <option value="{{$key}}">{{$categorie}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     @csrf
                 </form>
-                {{--<div>
-                    <a href="#">
-                        <button>Reserva tu visita</button>
-                    </a>
-                </div>--}}
+                @if(isset($errors) && count($errors)>0)
+                    <div class="alert alert-danger" role="alert" style="margin-top: 1rem">
+                        Hay uno o más campos vacíos*
+                    </div>
+                @endif
             </div>
         </div>
         <hr>
-        @isset($data['postsSearched'])
-            @foreach($data['postsSearched'] as $post)
-                <div class="postsBusqueda">
-                    <a href="{{url("stickerAbierto/1")}}">
-                        <div class="sticker" style="background-image: url('images/arcos_felipe.jpg');background-size: cover;">
+        <div class="usersSearched">
+        @isset($data['users'])
+            @foreach($data['users'] as $user)
+                    <a href="{{ route('perfiles', $user->id) }}">
+                        @if($user->profile_image != null)
+                            <div class="sticker" style="background-image: url({{asset('imagesStored/'.$user->profile_image)}});background-size: cover;max-width: 100%">
+                        @else
+                            <div class="sticker" style="background-image: url({{asset('imagesStored/usuarioDefecto.png')}});background-size: cover;">
+                        @endif
+
                             <div>
-                                <p>Categoria</p>
-                            </div>
-                            <div>
-                                <h5>Arcos</h5>
+                                <h5>{{$user->user_aka}}</h5>
                             </div>
                         </div>
                     </a>
-                </div>
-    </div>
             @endforeach
         @endisset
+        </div>
+    </div>
+
 @endsection
 
 @section('js')
     <script>
         $(document).ready(function () {
             $('.js-example-basic-multiple').select2({
-                placeholder: "Categoria"
+                placeholder: "Seleccione"
             });
         });
     </script>
