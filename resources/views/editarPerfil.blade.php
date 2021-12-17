@@ -22,31 +22,31 @@
             </div>
             <div>
                 <div>
-                    <span style="color: #1C60AD">Nombre</span>
+                    <span>Nombre</span>
                     <div>
-                        <input name="newNameUser" type="text" maxlength="20" value="{{isset($data['name']) ? $data['name'] : 'Nombre'}}" class="nombreUserEditarPerfil" id="nombreUserEditarPerfil">
+                        <input style="color: #1C60AD" name="newNameUser" type="text" maxlength="20" value="{{isset($data['name']) ? $data['name'] : 'Nombre'}}" class="nombreUserEditarPerfil" id="nombreUserEditarPerfil">
                         <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
                 <div>
-                    <span style="color: #1C60AD">Apellidos</span>
+                    <span>Apellidos</span>
                     <div>
-                        <input name="newLastNameUser" type="text" maxlength="50" value="{{isset($data['last_name']) ? $data['last_name'] : 'Apellido'}}" class="apellidoUserEditarPerfil" id="apellidoUserEditarPerfil">
+                        <input style="color: #1C60AD" name="newLastNameUser" type="text" maxlength="50" value="{{isset($data['last_name']) ? $data['last_name'] : 'Apellido'}}" class="apellidoUserEditarPerfil" id="apellidoUserEditarPerfil">
                         <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
                 <div>
-                    <span style="color: #1C60AD">Nombre de usuario</span>
+                    <span>Nombre de usuario</span>
                     <div>
-                        <input name="newUser" type="text" maxlength="20" value="{{isset($data['user_aka']) ? $data['user_aka'] : 'Usuario'}}" class="usuarioUserEditarPerfil" id="usuarioUserEditarPerfil">
+                        <input style="color: #1C60AD" name="newUser" type="text" maxlength="20" value="{{isset($data['user_aka']) ? $data['user_aka'] : 'Usuario'}}" class="usuarioUserEditarPerfil" id="usuarioUserEditarPerfil">
                         <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
                 <hr/>
                 <div>
-                    <span style="color: #1C60AD">Instagram</span>
+                    <span>Instagram</span>
                     <div>
-                        <input name="newInstagramName" type="text" maxlength="20" value="{{isset($data['instagram_user']) ? $data['instagram_user'] : 'Instagram'}}" class="instagramUserEditarPerfil" id="instagramUserEditarPerfil">
+                        <input style="color: #1C60AD" name="newInstagramName" type="text" maxlength="20" value="{{isset($data['instagram_user']) ? $data['instagram_user'] : 'Instagram'}}" class="instagramUserEditarPerfil" id="instagramUserEditarPerfil">
                         <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
