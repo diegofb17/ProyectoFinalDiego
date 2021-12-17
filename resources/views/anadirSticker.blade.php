@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="anadirSticker">
-        <form action="{{route('paginaPrincipal')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('storeSticker')}}" method="post" enctype="multipart/form-data">
             <div>
-                <a href="{{url()->previous()}}"><i class="fas fa-times"></i></a>
+                <a href="{{route('paginaPrincipal')}}"><i class="fas fa-times"></i></a>
                 <span>Añade un sitio</span>
                 <button type="submit"><i class="fas fa-paper-plane"></i></button>
             </div>
