@@ -38,10 +38,15 @@ Route::get('/elementos_guardados', 'App\Http\Controllers\ElementoGuardadoControl
 Route::get('/editar_perfil', 'App\Http\Controllers\EditarPerfilController@editarPerfil')->name('editarPerfil');
 Route::post('/update_profile', 'App\Http\Controllers\UpdateProfileController@updateProfile')->name('updateProfile');
 
+//Configuracion
 Route::get('/configuracion', 'App\Http\Controllers\ConfiguracionController@configuracion')->name('configuracion');
 Route::get('/administrar_cuenta', 'App\Http\Controllers\AdministrarCuentaController@administrarCuenta')->name('administrarCuenta');
 
+//Busqueda
 Route::get('/busqueda', 'App\Http\Controllers\BusquedaController@busqueda')->name('busqueda');
 Route::post('/mostrarBusqueda', 'App\Http\Controllers\BusquedaController@mostrarBusqueda')->name('mostrarBusqueda');
 
-
+//Avisos legales
+Route::get('/cookies', 'App\Http\Controllers\AvisoLegalController@cookies')->name('cookies');
+Route::get('/privacidad', 'App\Http\Controllers\AvisoLegalController@privacidad')->name('privacidad');
+Route::get('/terminos', 'App\Http\Controllers\AvisoLegalController@terminos')->name('terminos');

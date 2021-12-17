@@ -82,7 +82,7 @@ class StoreStickerController extends Controller
             'descripcionSticker' => 'required',
             'categoriaSticker' => 'required',
             'imagenes' => 'required',
-            'imagenes.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'imagenes.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000'
         ]);
 
         if (!$validator->passes()) {

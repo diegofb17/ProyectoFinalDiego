@@ -9,7 +9,7 @@
             <p>CUENTA</p>
             <div>
                 <i class="far fa-user"></i>
-                <a href="{{route('administrarCuenta')}}">
+                <a href="#">
                     <span>Administrar cuenta</span>
                 </a>
             </div>
@@ -27,11 +27,23 @@
         </div>
         <hr/>
         <div class="bloqueConfiguracion">
-            <p>INICIAR SESIÓN</p>
+            <p>AVISOS LEGALES</p>
             <div>
-                <i class="fas fa-exchange-alt"></i>
-                <span>Cambiar de cuenta</span>
+                <i class="fas fa-lock"></i>
+                <a href="{{route('privacidad')}}">Politica de privacidad</a>
             </div>
+            <div>
+                <i class="fas fa-lock"></i>
+                <a href="{{route('cookies')}}">Politica de cookies</a>
+            </div>
+            <div>
+                <i style="font-size: 1.2rem" class="fas fa-clipboard-list"></i>
+                <a href="{{route('terminos')}}">Términos de uso</a>
+            </div>
+        </div>
+        <hr/>
+        <div class="bloqueConfiguracion">
+            <p>INICIAR SESIÓN</p>
             <div>
                 <i class="fas fa-sign-out-alt"></i>
                 <a href="{{ route('logout') }}"

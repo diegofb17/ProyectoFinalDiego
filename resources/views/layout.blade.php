@@ -25,7 +25,9 @@
 </head>
 <body>
 <header>
-    <img src={{asset("images/logo.png")}} class="p-2" width="250">
+    <a href="{{route('paginaPrincipal')}}">
+        <img src={{asset("images/logo.png")}} class="p-2" width="250">
+    </a>
 </header>
 <section>
     @yield('content')

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="editarPerfil">
-        <form action="{{route('updateProfile')}}" method="post" enctype="multipart/form-data">
+        <form id="editarPerfilSubmit" action="{{route('updateProfile')}}" method="post" enctype="multipart/form-data">
             <div>
                 <a href="{{route('perfiles',$data['id'])}}">
                     <i class="fas fa-arrow-left"></i>
@@ -22,32 +22,32 @@
             </div>
             <div>
                 <div>
-                    <span>Nombre</span>
+                    <span style="color: #1C60AD">Nombre</span>
                     <div>
                         <input name="newNameUser" type="text" maxlength="20" value="{{isset($data['name']) ? $data['name'] : 'Nombre'}}" class="nombreUserEditarPerfil" id="nombreUserEditarPerfil">
-                        <i class="fas fa-chevron-right"></i>
+                        <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
                 <div>
-                    <span>Apellidos</span>
+                    <span style="color: #1C60AD">Apellidos</span>
                     <div>
                         <input name="newLastNameUser" type="text" maxlength="50" value="{{isset($data['last_name']) ? $data['last_name'] : 'Apellido'}}" class="apellidoUserEditarPerfil" id="apellidoUserEditarPerfil">
-                        <i class="fas fa-chevron-right"></i>
+                        <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
                 <div>
-                    <span>Nombre de usuario</span>
+                    <span style="color: #1C60AD">Nombre de usuario</span>
                     <div>
                         <input name="newUser" type="text" maxlength="20" value="{{isset($data['user_aka']) ? $data['user_aka'] : 'Usuario'}}" class="usuarioUserEditarPerfil" id="usuarioUserEditarPerfil">
-                        <i class="fas fa-chevron-right"></i>
+                        <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
                 <hr/>
                 <div>
-                    <span>Instagram</span>
+                    <span style="color: #1C60AD">Instagram</span>
                     <div>
                         <input name="newInstagramName" type="text" maxlength="20" value="{{isset($data['instagram_user']) ? $data['instagram_user'] : 'Instagram'}}" class="instagramUserEditarPerfil" id="instagramUserEditarPerfil">
-                        <i class="fas fa-chevron-right"></i>
+                        <i id="submitForm" style="cursor:pointer" class="fas fa-chevron-right"></i>
                     </div>
                 </div>
                 @if(isset($errors) && count($errors)>0)
@@ -64,4 +64,12 @@
             @csrf
         </form>
     </div>
+@endsection
+
+@section('js')
+    <script>
+        $('#submitForm').click(function() {
+            $("#editarPerfilSubmit").submit();
+        });
+    </script>
 @endsection

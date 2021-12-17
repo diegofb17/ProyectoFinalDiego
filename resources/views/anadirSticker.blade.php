@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="anadirSticker">
-        <form action="{{route('storeSticker')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('paginaPrincipal')}}" method="post" enctype="multipart/form-data">
             <div>
                 <a href="{{url()->previous()}}"><i class="fas fa-times"></i></a>
                 <span>Añade un sitio</span>
@@ -27,7 +27,7 @@
                     <div class="bloqueFormInputs">
                         <div><i class="fas fa-shapes"></i></div>
                         <div>
-                            <span>Descripcion*</span>
+                            <span>Descripción*</span>
                             <textarea id="descripcionSticker" name="descripcionSticker"placeholder="Breve descripción del sitio" maxlength="500" minlength="20"></textarea>
                         </div>
                     </div>
